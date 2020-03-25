@@ -16,6 +16,7 @@
 		959AB0BC242A089800883616 /* HDImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0BB242A089800883616 /* HDImageCompressTool.m */; };
 		959AB0D3242B871200883616 /* HDFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0D1242B871200883616 /* HDFileUtil.m */; };
 		959AB0D7242B871C00883616 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0D5242B871C00883616 /* MBProgressHUD.m */; };
+		959AB0DB242BC91500883616 /* NSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0DA242BC91500883616 /* NSString+URL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		959AB0D2242B871200883616 /* HDFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDFileUtil.h; sourceTree = "<group>"; };
 		959AB0D5242B871C00883616 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		959AB0D6242B871C00883616 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		959AB0D9242BC91500883616 /* NSString+URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+URL.h"; sourceTree = "<group>"; };
+		959AB0DA242BC91500883616 /* NSString+URL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+URL.m"; sourceTree = "<group>"; };
 		BDBE9679D70EFE981D44F087 /* Pods-ImageCompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +93,7 @@
 		959AB0A4242A074800883616 /* ImageCompress */ = {
 			isa = PBXGroup;
 			children = (
+				959AB0D8242BC90300883616 /* Category */,
 				959AB0D4242B871C00883616 /* MBProgressHUD */,
 				959AB0D0242B871200883616 /* FileOperation */,
 				959AB0B9242A089800883616 /* HDImageCompressTool */,
@@ -131,6 +135,15 @@
 				959AB0D6242B871C00883616 /* MBProgressHUD.h */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		959AB0D8242BC90300883616 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				959AB0D9242BC91500883616 /* NSString+URL.h */,
+				959AB0DA242BC91500883616 /* NSString+URL.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959AB0DB242BC91500883616 /* NSString+URL.m in Sources */,
 				959AB0AA242A074800883616 /* ViewController.m in Sources */,
 				959AB0D7242B871C00883616 /* MBProgressHUD.m in Sources */,
 				959AB0BC242A089800883616 /* HDImageCompressTool.m in Sources */,
