@@ -93,7 +93,7 @@ static NSString *const kTableColumnImageIcon = @"ImageIcon";
 }
 
 - (void)initializePath {
-    self.savePath = @"/Users/VanJay/Downloads/output";
+    self.savePath =  [NSString stringWithFormat:@"%@/output", [NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES)objectAtIndex:0]];
     BOOL exist = [HDFileUtil isFileExistedFilePath:self.savePath];
     if (exist) {
         BOOL isDir = [HDFileUtil isDirFilePath:self.savePath];
