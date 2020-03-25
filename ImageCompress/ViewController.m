@@ -38,7 +38,7 @@ static NSString *const kTableColumnImageIcon = @"ImageIcon";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self initializePath];
+//    [self initializePath];
     [self.view addSubview:self.selectButton];
     [self.view addSubview:self.exportButton];
     [self.view addSubview:self.tipLeft];
@@ -168,44 +168,58 @@ static NSString *const kTableColumnImageIcon = @"ImageIcon";
 }
 
 - (void)exportButtonClickedHandler {
-    if (!self.urls || self.urls.count <= 0) {
-        [self showAlertWithStyle:NSWarningAlertStyle title:@"还未选择图片" subtitle:@"请选择图片"];
-        return;
-    }
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [MBProgressHUD showHUDAddedTo:self.view animated:true];
-    });
-
-    __block NSInteger index = 0;
-    CGFloat limitedSize = self.textField.stringValue.floatValue;
-    for (NSURL *url in self.urls) {
-        static NSImage *image;
-        image = [[NSImage alloc] initByReferencingURL:url];
-
-        HDCompressedImageBlock block = ^(NSData *imageData) {
-            NSString *fileName = [url lastPathComponent];
-            NSString *path = [NSString stringWithFormat:@"%@/%@", self.savePath, fileName];
-            NSError *error;
-            [imageData writeToFile:path options:0 error:&error];
-            if (error) {
-                NSLog(@"写入失败:%@", error.localizedFailureReason);
-            } else {
-                NSLog(@"写入成功");
+    NSSavePanel *panel = [NSSavePanel savePanel];
+    [panel setDirectoryURL:[NSURL fileURLWithPath:[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop"]]];
+    [panel setNameFieldStringValue:self.urls.firstObject.lastPathComponent];
+    [panel setMessage:@"请选择保存的路径"];
+    [panel setAllowsOtherFileTypes:YES];
+    [panel setAllowedFileTypes:@[@"png",@"jpg"]];
+    [panel setExtensionHidden:NO];
+    [panel setCanCreateDirectories:YES];
+    [panel beginSheetModalForWindow:self.view.window completionHandler:^(NSInteger result){
+        if (result == NSFileHandlingPanelOKButton) {
+            [panel close];
+            if (!self.urls || self.urls.count <= 0) {
+                [self showAlertWithStyle:NSWarningAlertStyle title:@"还未选择图片" subtitle:@"请选择图片"];
+                return;
             }
-            index++;
-            if (index >= self.urls.count) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [MBProgressHUD hideHUDForView:self.view animated:true];
-                    [self showAlertWithStyle:NSInformationalAlertStyle title:@"转换成功" subtitle:@"请在桌面 output 目录查看"];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD showHUDAddedTo:self.view animated:true];
+            });
+            
+            __block NSInteger index = 0;
+            CGFloat limitedSize = self.textField.stringValue.floatValue;
+            for (NSURL *url in self.urls) {
+                static NSImage *image;
+                image = [[NSImage alloc] initByReferencingURL:url];
+                HDCompressedImageBlock block = ^(NSData *imageData) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        NSString *fileName = [url lastPathComponent];
+                        NSString *path = [NSString stringWithFormat:@"%@/%@", [panel.URL.path stringByDeletingLastPathComponent], fileName];
+                        NSError *error;
+                        [imageData writeToFile:path options:0 error:&error];
+                        if (error) {
+                            NSLog(@"写入失败:%@", error.localizedFailureReason);
+                        } else {
+                            NSLog(@"写入成功");
+                        }
+                        index++;
+                        if (index >= self.urls.count) {
+                            [MBProgressHUD hideHUDForView:self.view animated:true];
+    //                            [self showAlertWithStyle:NSInformationalAlertStyle title:@"转换成功" subtitle:@"请在桌面 output 目录查看"];
+                            [[NSWorkspace sharedWorkspace] openFile:[panel.URL.path stringByDeletingLastPathComponent] withApplication:@"Finder"];
+                        }
+                    });
+                };
+                dispatch_async(dispatch_get_global_queue(0, 0), ^{
+                    [HDImageCompressTool compressedImage:image
+                                                 imageKB:limitedSize
+                                              imageBlock:block];
                 });
             }
-        };
-
-        [HDImageCompressTool compressedImage:image
-                                     imageKB:limitedSize
-                                  imageBlock:block];
-    }
+        }
+    }];
 }
 
 #pragma mark - private methods
