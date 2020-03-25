@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31F80D23D8DC2FA1C5B4CA10 /* Pods_ImageCompress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208BF6B81AA2487C179BE1A0 /* Pods_ImageCompress.framework */; };
+		959AB0A7242A074800883616 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0A6242A074800883616 /* AppDelegate.m */; };
+		959AB0AA242A074800883616 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0A9242A074800883616 /* ViewController.m */; };
+		959AB0AC242A074A00883616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0AB242A074A00883616 /* Assets.xcassets */; };
+		959AB0AF242A074A00883616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0AD242A074A00883616 /* Main.storyboard */; };
+		959AB0B2242A074A00883616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0B1242A074A00883616 /* main.m */; };
+		959AB0BC242A089800883616 /* HDImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0BB242A089800883616 /* HDImageCompressTool.m */; };
+		959AB0D3242B871200883616 /* HDFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0D1242B871200883616 /* HDFileUtil.m */; };
+		959AB0D7242B871C00883616 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0D5242B871C00883616 /* MBProgressHUD.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		208BF6B81AA2487C179BE1A0 /* Pods_ImageCompress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49495B7296D1BB103D37A138 /* Pods-ImageCompress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.release.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.release.xcconfig"; sourceTree = "<group>"; };
+		959AB0A2242A074800883616 /* ImageCompress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCompress.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		959AB0A5242A074800883616 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		959AB0A6242A074800883616 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		959AB0A8242A074800883616 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		959AB0A9242A074800883616 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		959AB0AB242A074A00883616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		959AB0AE242A074A00883616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		959AB0B0242A074A00883616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959AB0B1242A074A00883616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		959AB0B3242A074A00883616 /* ImageCompress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageCompress.entitlements; sourceTree = "<group>"; };
+		959AB0BA242A089800883616 /* HDImageCompressTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDImageCompressTool.h; sourceTree = "<group>"; };
+		959AB0BB242A089800883616 /* HDImageCompressTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDImageCompressTool.m; sourceTree = "<group>"; };
+		959AB0D1242B871200883616 /* HDFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDFileUtil.m; sourceTree = "<group>"; };
+		959AB0D2242B871200883616 /* HDFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDFileUtil.h; sourceTree = "<group>"; };
+		959AB0D5242B871C00883616 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		959AB0D6242B871C00883616 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		BDBE9679D70EFE981D44F087 /* Pods-ImageCompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		959AB09F242A074800883616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F80D23D8DC2FA1C5B4CA10 /* Pods_ImageCompress.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A63BACC6F8CC0262B90152D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				208BF6B81AA2487C179BE1A0 /* Pods_ImageCompress.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AABB0BE4411657096425CF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDBE9679D70EFE981D44F087 /* Pods-ImageCompress.debug.xcconfig */,
+				49495B7296D1BB103D37A138 /* Pods-ImageCompress.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		959AB099242A074800883616 = {
+			isa = PBXGroup;
+			children = (
+				959AB0A4242A074800883616 /* ImageCompress */,
+				959AB0A3242A074800883616 /* Products */,
+				8AABB0BE4411657096425CF3 /* Pods */,
+				6A63BACC6F8CC0262B90152D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		959AB0A3242A074800883616 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				959AB0A2242A074800883616 /* ImageCompress.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		959AB0A4242A074800883616 /* ImageCompress */ = {
+			isa = PBXGroup;
+			children = (
+				959AB0D4242B871C00883616 /* MBProgressHUD */,
+				959AB0D0242B871200883616 /* FileOperation */,
+				959AB0B9242A089800883616 /* HDImageCompressTool */,
+				959AB0A5242A074800883616 /* AppDelegate.h */,
+				959AB0A6242A074800883616 /* AppDelegate.m */,
+				959AB0A8242A074800883616 /* ViewController.h */,
+				959AB0A9242A074800883616 /* ViewController.m */,
+				959AB0AB242A074A00883616 /* Assets.xcassets */,
+				959AB0AD242A074A00883616 /* Main.storyboard */,
+				959AB0B0242A074A00883616 /* Info.plist */,
+				959AB0B1242A074A00883616 /* main.m */,
+				959AB0B3242A074A00883616 /* ImageCompress.entitlements */,
+			);
+			path = ImageCompress;
+			sourceTree = "<group>";
+		};
+		959AB0B9242A089800883616 /* HDImageCompressTool */ = {
+			isa = PBXGroup;
+			children = (
+				959AB0BA242A089800883616 /* HDImageCompressTool.h */,
+				959AB0BB242A089800883616 /* HDImageCompressTool.m */,
+			);
+			path = HDImageCompressTool;
+			sourceTree = "<group>";
+		};
+		959AB0D0242B871200883616 /* FileOperation */ = {
+			isa = PBXGroup;
+			children = (
+				959AB0D1242B871200883616 /* HDFileUtil.m */,
+				959AB0D2242B871200883616 /* HDFileUtil.h */,
+			);
+			path = FileOperation;
+			sourceTree = "<group>";
+		};
+		959AB0D4242B871C00883616 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				959AB0D5242B871C00883616 /* MBProgressHUD.m */,
+				959AB0D6242B871C00883616 /* MBProgressHUD.h */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		959AB0A1242A074800883616 /* ImageCompress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 959AB0B6242A074A00883616 /* Build configuration list for PBXNativeTarget "ImageCompress" */;
+			buildPhases = (
+				029AB3D007A9AE8A789A842D /* [CP] Check Pods Manifest.lock */,
+				959AB09E242A074800883616 /* Sources */,
+				959AB09F242A074800883616 /* Frameworks */,
+				959AB0A0242A074800883616 /* Resources */,
+				7BC6216BA2AB507342B15C41 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageCompress;
+			productName = ImageCompress;
+			productReference = 959AB0A2242A074800883616 /* ImageCompress.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		959AB09A242A074800883616 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = VanJay;
+				TargetAttributes = {
+					959AB0A1242A074800883616 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 959AB09D242A074800883616 /* Build configuration list for PBXProject "ImageCompress" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 959AB099242A074800883616;
+			productRefGroup = 959AB0A3242A074800883616 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				959AB0A1242A074800883616 /* ImageCompress */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		959AB0A0242A074800883616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959AB0AC242A074A00883616 /* Assets.xcassets in Resources */,
+				959AB0AF242A074A00883616 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		029AB3D007A9AE8A789A842D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageCompress-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BC6216BA2AB507342B15C41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		959AB09E242A074800883616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				959AB0AA242A074800883616 /* ViewController.m in Sources */,
+				959AB0D7242B871C00883616 /* MBProgressHUD.m in Sources */,
+				959AB0BC242A089800883616 /* HDImageCompressTool.m in Sources */,
+				959AB0B2242A074A00883616 /* main.m in Sources */,
+				959AB0D3242B871200883616 /* HDFileUtil.m in Sources */,
+				959AB0A7242A074800883616 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		959AB0AD242A074A00883616 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				959AB0AE242A074A00883616 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		959AB0B4242A074A00883616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		959AB0B5242A074A00883616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		959AB0B7242A074A00883616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDBE9679D70EFE981D44F087 /* Pods-ImageCompress.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AUM2E6FK73;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ImageCompress/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		959AB0B8242A074A00883616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49495B7296D1BB103D37A138 /* Pods-ImageCompress.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AUM2E6FK73;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ImageCompress/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		959AB09D242A074800883616 /* Build configuration list for PBXProject "ImageCompress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				959AB0B4242A074A00883616 /* Debug */,
+				959AB0B5242A074A00883616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		959AB0B6242A074A00883616 /* Build configuration list for PBXNativeTarget "ImageCompress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				959AB0B7242A074A00883616 /* Debug */,
+				959AB0B8242A074A00883616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 959AB09A242A074800883616 /* Project object */;
+}
