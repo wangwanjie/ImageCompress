@@ -197,7 +197,7 @@ static NSString *const kTableColumnImageIcon = @"ImageIcon";
             if (index >= self.urls.count) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [MBProgressHUD hideHUDForView:self.view animated:true];
-                    [self showAlertWithStyle:NSInformationalAlertStyle title:@"转换成功" subtitle:@"请在下载目录 output 目录查看"];
+                    [self showAlertWithStyle:NSInformationalAlertStyle title:@"转换成功" subtitle:@"请在桌面 output 目录查看"];
                 });
             }
         };
