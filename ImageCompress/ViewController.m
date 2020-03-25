@@ -190,6 +190,7 @@ static NSString *const kTableColumnImageIcon = @"ImageIcon";
             
             __block NSInteger index = 0;
             CGFloat limitedSize = self.textField.stringValue.floatValue;
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
             for (NSURL *url in self.urls) {
                 static NSImage *image;
                 image = [[NSImage alloc] initByReferencingURL:url];
@@ -212,12 +213,11 @@ static NSString *const kTableColumnImageIcon = @"ImageIcon";
                         }
                     });
                 };
-                dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                    [HDImageCompressTool compressedImage:image
-                                                 imageKB:limitedSize
-                                              imageBlock:block];
-                });
-            }
+                [HDImageCompressTool compressedImage:image
+                                             imageKB:limitedSize
+                                          imageBlock:block];
+                }
+            });
         }
     }];
 }
