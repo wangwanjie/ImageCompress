@@ -12,7 +12,6 @@ import Sparkle
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var helpMenu: NSMenuItem!
-//    @IBOutlet weak var updaterMenuItem: NSMenuItem!
     func applicationDidFinishLaunching(_: Notification) {
         helpMenu.action = #selector(showHelp)
         helpMenu.target = self
@@ -20,8 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         SUUpdater.shared()?.delegate = self
         SUUpdater.shared()?.sendsSystemProfile = true
         SUUpdater.shared()?.checkForUpdatesInBackground()
-//        updaterMenuItem.action = #selector(checkNewVersion)
-//        updaterMenuItem.target = self
     }
 
     func applicationWillTerminate(_: Notification) {
