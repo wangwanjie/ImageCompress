@@ -46,6 +46,15 @@ class ViewController: NSViewController {
         Array()
     }()
 
+    @objc lazy var tableViewContainer: NSScrollView = {
+        let tableViewContainer = NSScrollView()
+        tableViewContainer.drawsBackground = true
+        tableViewContainer.hasVerticalScroller = true
+        tableViewContainer.hasHorizontalRuler = true
+        tableViewContainer.documentView = self.tableView
+        return tableViewContainer
+    }()
+
     lazy var tableView: NSTableView = {
         let tableView = NSTableView()
         tableView.dataSource = self
@@ -58,12 +67,6 @@ class ViewController: NSViewController {
         tableView.usesAlternatingRowBackgroundColors = true
 
         tableView.gridColor = .magenta
-
-        let tableContainerView = NSScrollView()
-        tableContainerView.documentView = tableView
-        tableContainerView.drawsBackground = true
-        tableContainerView.hasVerticalRuler = true
-
         let column1 = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: ViewController.tableColumn1ItemIdentifier))
         column1.title = "图片路径"
         column1.width = self.view.frame.size.width
