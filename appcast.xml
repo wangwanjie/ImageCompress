@@ -16,9 +16,9 @@
                 url="https://raw.githubusercontent.com/wangwanjie/ImageCompress/master/release/ImageCompress1.5.app.zip"
                 sparkle:shortVersionString="1.5"
                 sparkle:version="2020032603"
-                length="7268803"
+                length="7266765"
                 type="application/octet-stream"
-                sparkle:edSignature="zqfbcDwRUA/jNRKkQP3bnWeLctT1w0fMpqJh3jQP21zalJDYskyTLfnOD5nw5lIN70aAjCag/mMBaEBUzW5KAA=="
+                sparkle:edSignature="kCwVbOS/R0mzODZELC8jjjwtiu80z8+XiIximo9Wzfp3eJ+1xs4k0DsU8jSUmj4ROqIlmHbkZNNWrByPoH5sCg=="
             />
             <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
         </item>
