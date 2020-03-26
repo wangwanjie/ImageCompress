@@ -7,157 +7,178 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31F80D23D8DC2FA1C5B4CA10 /* Pods_ImageCompress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208BF6B81AA2487C179BE1A0 /* Pods_ImageCompress.framework */; };
-		959AB0A7242A074800883616 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0A6242A074800883616 /* AppDelegate.m */; };
-		959AB0AA242A074800883616 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0A9242A074800883616 /* ViewController.m */; };
-		959AB0AC242A074A00883616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0AB242A074A00883616 /* Assets.xcassets */; };
-		959AB0AF242A074A00883616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0AD242A074A00883616 /* Main.storyboard */; };
-		959AB0B2242A074A00883616 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0B1242A074A00883616 /* main.m */; };
-		959AB0BC242A089800883616 /* HDImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0BB242A089800883616 /* HDImageCompressTool.m */; };
-		959AB0D3242B871200883616 /* HDFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0D1242B871200883616 /* HDFileUtil.m */; };
-		959AB0D7242B871C00883616 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0D5242B871C00883616 /* MBProgressHUD.m */; };
-		959AB0DB242BC91500883616 /* NSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0DA242BC91500883616 /* NSString+URL.m */; };
+		956C7444242C833100BE38C9 /* ViewController+DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7443242C833100BE38C9 /* ViewController+DragDrop.swift */; };
+		956C7446242C842000BE38C9 /* ViewController+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7445242C842000BE38C9 /* ViewController+Event.swift */; };
+		956C7448242C848E00BE38C9 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7447242C848E00BE38C9 /* AlertHelper.swift */; };
+		956C744A242C9AA400BE38C9 /* ViewController+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7449242C9AA400BE38C9 /* ViewController+KVO.swift */; };
+		959AB0EC242C5F0600883616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0EB242C5F0600883616 /* AppDelegate.swift */; };
+		959AB0EE242C5F0600883616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0ED242C5F0600883616 /* ViewController.swift */; };
+		959AB0F0242C5F0800883616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0EF242C5F0800883616 /* Assets.xcassets */; };
+		959AB0F3242C5F0800883616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0F1242C5F0800883616 /* Main.storyboard */; };
+		959AB118242C5FC400883616 /* WJDragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB116242C5FC400883616 /* WJDragDropView.swift */; };
+		959AB119242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB117242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift */; };
+		959AB126242C603500883616 /* NSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB11B242C603400883616 /* NSString+URL.m */; };
+		959AB127242C603500883616 /* HDFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB11E242C603400883616 /* HDFileUtil.m */; };
+		959AB128242C603500883616 /* HDImageCompressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB122242C603400883616 /* HDImageCompressTool.m */; };
+		959AB129242C603500883616 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB124242C603500883616 /* MBProgressHUD.m */; };
+		EF19417D15E3E26FD1D91FAB /* Pods_ImageCompress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15580348F160DE27711FBEBB /* Pods_ImageCompress.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		208BF6B81AA2487C179BE1A0 /* Pods_ImageCompress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49495B7296D1BB103D37A138 /* Pods-ImageCompress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.release.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.release.xcconfig"; sourceTree = "<group>"; };
-		959AB0A2242A074800883616 /* ImageCompress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCompress.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		959AB0A5242A074800883616 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		959AB0A6242A074800883616 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		959AB0A8242A074800883616 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		959AB0A9242A074800883616 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		959AB0AB242A074A00883616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		959AB0AE242A074A00883616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		959AB0B0242A074A00883616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		959AB0B1242A074A00883616 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		959AB0B3242A074A00883616 /* ImageCompress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageCompress.entitlements; sourceTree = "<group>"; };
-		959AB0BA242A089800883616 /* HDImageCompressTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDImageCompressTool.h; sourceTree = "<group>"; };
-		959AB0BB242A089800883616 /* HDImageCompressTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDImageCompressTool.m; sourceTree = "<group>"; };
-		959AB0D1242B871200883616 /* HDFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDFileUtil.m; sourceTree = "<group>"; };
-		959AB0D2242B871200883616 /* HDFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDFileUtil.h; sourceTree = "<group>"; };
-		959AB0D5242B871C00883616 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		959AB0D6242B871C00883616 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		959AB0D9242BC91500883616 /* NSString+URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+URL.h"; sourceTree = "<group>"; };
-		959AB0DA242BC91500883616 /* NSString+URL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+URL.m"; sourceTree = "<group>"; };
-		BDBE9679D70EFE981D44F087 /* Pods-ImageCompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.debug.xcconfig"; sourceTree = "<group>"; };
+		15580348F160DE27711FBEBB /* Pods_ImageCompress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FF948D06EFC7E96D4208F78 /* Pods-ImageCompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.debug.xcconfig"; sourceTree = "<group>"; };
+		956C7443242C833100BE38C9 /* ViewController+DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DragDrop.swift"; sourceTree = "<group>"; };
+		956C7445242C842000BE38C9 /* ViewController+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Event.swift"; sourceTree = "<group>"; };
+		956C7447242C848E00BE38C9 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		956C7449242C9AA400BE38C9 /* ViewController+KVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+KVO.swift"; sourceTree = "<group>"; };
+		959AB0E8242C5F0600883616 /* ImageCompress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCompress.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		959AB0EB242C5F0600883616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		959AB0ED242C5F0600883616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		959AB0EF242C5F0800883616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		959AB0F2242C5F0800883616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		959AB0F4242C5F0800883616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959AB0F5242C5F0800883616 /* ImageCompress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageCompress.entitlements; sourceTree = "<group>"; };
+		959AB0FB242C5F2D00883616 /* ImageCompress-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageCompress-Bridging-Header.h"; sourceTree = "<group>"; };
+		959AB116242C5FC400883616 /* WJDragDropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WJDragDropView.swift; sourceTree = "<group>"; };
+		959AB117242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDraggingInfo+FilePathURL.swift"; sourceTree = "<group>"; };
+		959AB11B242C603400883616 /* NSString+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URL.m"; sourceTree = "<group>"; };
+		959AB11C242C603400883616 /* NSString+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URL.h"; sourceTree = "<group>"; };
+		959AB11E242C603400883616 /* HDFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDFileUtil.m; sourceTree = "<group>"; };
+		959AB11F242C603400883616 /* HDFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDFileUtil.h; sourceTree = "<group>"; };
+		959AB121242C603400883616 /* HDImageCompressTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDImageCompressTool.h; sourceTree = "<group>"; };
+		959AB122242C603400883616 /* HDImageCompressTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDImageCompressTool.m; sourceTree = "<group>"; };
+		959AB124242C603500883616 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		959AB125242C603500883616 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E3C9F985CEFF6DB863AC1F37 /* Pods-ImageCompress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.release.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		959AB09F242A074800883616 /* Frameworks */ = {
+		959AB0E5242C5F0600883616 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31F80D23D8DC2FA1C5B4CA10 /* Pods_ImageCompress.framework in Frameworks */,
+				EF19417D15E3E26FD1D91FAB /* Pods_ImageCompress.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6A63BACC6F8CC0262B90152D /* Frameworks */ = {
+		6CF2AE553AD8135ED60C4030 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				208BF6B81AA2487C179BE1A0 /* Pods_ImageCompress.framework */,
+				15580348F160DE27711FBEBB /* Pods_ImageCompress.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8AABB0BE4411657096425CF3 /* Pods */ = {
+		8E600F01182F0B4E73A6B4C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BDBE9679D70EFE981D44F087 /* Pods-ImageCompress.debug.xcconfig */,
-				49495B7296D1BB103D37A138 /* Pods-ImageCompress.release.xcconfig */,
+				1FF948D06EFC7E96D4208F78 /* Pods-ImageCompress.debug.xcconfig */,
+				E3C9F985CEFF6DB863AC1F37 /* Pods-ImageCompress.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		959AB099242A074800883616 = {
+		959AB0DF242C5F0600883616 = {
 			isa = PBXGroup;
 			children = (
-				959AB0A4242A074800883616 /* ImageCompress */,
-				959AB0A3242A074800883616 /* Products */,
-				8AABB0BE4411657096425CF3 /* Pods */,
-				6A63BACC6F8CC0262B90152D /* Frameworks */,
+				959AB0EA242C5F0600883616 /* ImageCompress */,
+				959AB0E9242C5F0600883616 /* Products */,
+				8E600F01182F0B4E73A6B4C0 /* Pods */,
+				6CF2AE553AD8135ED60C4030 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		959AB0A3242A074800883616 /* Products */ = {
+		959AB0E9242C5F0600883616 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				959AB0A2242A074800883616 /* ImageCompress.app */,
+				959AB0E8242C5F0600883616 /* ImageCompress.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		959AB0A4242A074800883616 /* ImageCompress */ = {
+		959AB0EA242C5F0600883616 /* ImageCompress */ = {
 			isa = PBXGroup;
 			children = (
-				959AB0D8242BC90300883616 /* Category */,
-				959AB0D4242B871C00883616 /* MBProgressHUD */,
-				959AB0D0242B871200883616 /* FileOperation */,
-				959AB0B9242A089800883616 /* HDImageCompressTool */,
-				959AB0A5242A074800883616 /* AppDelegate.h */,
-				959AB0A6242A074800883616 /* AppDelegate.m */,
-				959AB0A8242A074800883616 /* ViewController.h */,
-				959AB0A9242A074800883616 /* ViewController.m */,
-				959AB0AB242A074A00883616 /* Assets.xcassets */,
-				959AB0AD242A074A00883616 /* Main.storyboard */,
-				959AB0B0242A074A00883616 /* Info.plist */,
-				959AB0B1242A074A00883616 /* main.m */,
-				959AB0B3242A074A00883616 /* ImageCompress.entitlements */,
+				959AB115242C5FC400883616 /* WJDragDropView */,
+				959AB11A242C603400883616 /* Category */,
+				959AB11D242C603400883616 /* FileOperation */,
+				959AB120242C603400883616 /* HDImageCompressTool */,
+				959AB123242C603500883616 /* MBProgressHUD */,
+				959AB0FB242C5F2D00883616 /* ImageCompress-Bridging-Header.h */,
+				959AB0F5242C5F0800883616 /* ImageCompress.entitlements */,
+				959AB0EB242C5F0600883616 /* AppDelegate.swift */,
+				959AB0EF242C5F0800883616 /* Assets.xcassets */,
+				959AB0F4242C5F0800883616 /* Info.plist */,
+				959AB0F1242C5F0800883616 /* Main.storyboard */,
+				959AB0ED242C5F0600883616 /* ViewController.swift */,
+				956C7443242C833100BE38C9 /* ViewController+DragDrop.swift */,
+				956C7445242C842000BE38C9 /* ViewController+Event.swift */,
+				956C7447242C848E00BE38C9 /* AlertHelper.swift */,
+				956C7449242C9AA400BE38C9 /* ViewController+KVO.swift */,
 			);
 			path = ImageCompress;
 			sourceTree = "<group>";
 		};
-		959AB0B9242A089800883616 /* HDImageCompressTool */ = {
+		959AB115242C5FC400883616 /* WJDragDropView */ = {
 			isa = PBXGroup;
 			children = (
-				959AB0BA242A089800883616 /* HDImageCompressTool.h */,
-				959AB0BB242A089800883616 /* HDImageCompressTool.m */,
+				959AB116242C5FC400883616 /* WJDragDropView.swift */,
+				959AB117242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift */,
 			);
-			path = HDImageCompressTool;
+			path = WJDragDropView;
 			sourceTree = "<group>";
 		};
-		959AB0D0242B871200883616 /* FileOperation */ = {
+		959AB11A242C603400883616 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				959AB0D1242B871200883616 /* HDFileUtil.m */,
-				959AB0D2242B871200883616 /* HDFileUtil.h */,
+				959AB11B242C603400883616 /* NSString+URL.m */,
+				959AB11C242C603400883616 /* NSString+URL.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		959AB11D242C603400883616 /* FileOperation */ = {
+			isa = PBXGroup;
+			children = (
+				959AB11E242C603400883616 /* HDFileUtil.m */,
+				959AB11F242C603400883616 /* HDFileUtil.h */,
 			);
 			path = FileOperation;
 			sourceTree = "<group>";
 		};
-		959AB0D4242B871C00883616 /* MBProgressHUD */ = {
+		959AB120242C603400883616 /* HDImageCompressTool */ = {
 			isa = PBXGroup;
 			children = (
-				959AB0D5242B871C00883616 /* MBProgressHUD.m */,
-				959AB0D6242B871C00883616 /* MBProgressHUD.h */,
+				959AB121242C603400883616 /* HDImageCompressTool.h */,
+				959AB122242C603400883616 /* HDImageCompressTool.m */,
 			);
-			path = MBProgressHUD;
+			path = HDImageCompressTool;
 			sourceTree = "<group>";
 		};
-		959AB0D8242BC90300883616 /* Category */ = {
+		959AB123242C603500883616 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				959AB0D9242BC91500883616 /* NSString+URL.h */,
-				959AB0DA242BC91500883616 /* NSString+URL.m */,
+				959AB124242C603500883616 /* MBProgressHUD.m */,
+				959AB125242C603500883616 /* MBProgressHUD.h */,
 			);
-			path = Category;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		959AB0A1242A074800883616 /* ImageCompress */ = {
+		959AB0E7242C5F0600883616 /* ImageCompress */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 959AB0B6242A074A00883616 /* Build configuration list for PBXNativeTarget "ImageCompress" */;
+			buildConfigurationList = 959AB0F8242C5F0800883616 /* Build configuration list for PBXNativeTarget "ImageCompress" */;
 			buildPhases = (
-				029AB3D007A9AE8A789A842D /* [CP] Check Pods Manifest.lock */,
-				959AB09E242A074800883616 /* Sources */,
-				959AB09F242A074800883616 /* Frameworks */,
-				959AB0A0242A074800883616 /* Resources */,
-				7BC6216BA2AB507342B15C41 /* [CP] Embed Pods Frameworks */,
+				A00E4B4B1AC4A0EEC7E99039 /* [CP] Check Pods Manifest.lock */,
+				959AB0E4242C5F0600883616 /* Sources */,
+				959AB0E5242C5F0600883616 /* Frameworks */,
+				959AB0E6242C5F0600883616 /* Resources */,
+				68CDD7EC321E2A6798BE5EB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,24 +186,26 @@
 			);
 			name = ImageCompress;
 			productName = ImageCompress;
-			productReference = 959AB0A2242A074800883616 /* ImageCompress.app */;
+			productReference = 959AB0E8242C5F0600883616 /* ImageCompress.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		959AB09A242A074800883616 /* Project object */ = {
+		959AB0E0242C5F0600883616 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = VanJay;
 				TargetAttributes = {
-					959AB0A1242A074800883616 = {
+					959AB0E7242C5F0600883616 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
-			buildConfigurationList = 959AB09D242A074800883616 /* Build configuration list for PBXProject "ImageCompress" */;
+			buildConfigurationList = 959AB0E3242C5F0600883616 /* Build configuration list for PBXProject "ImageCompress" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -190,30 +213,47 @@
 				en,
 				Base,
 			);
-			mainGroup = 959AB099242A074800883616;
-			productRefGroup = 959AB0A3242A074800883616 /* Products */;
+			mainGroup = 959AB0DF242C5F0600883616;
+			productRefGroup = 959AB0E9242C5F0600883616 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				959AB0A1242A074800883616 /* ImageCompress */,
+				959AB0E7242C5F0600883616 /* ImageCompress */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		959AB0A0242A074800883616 /* Resources */ = {
+		959AB0E6242C5F0600883616 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959AB0AC242A074A00883616 /* Assets.xcassets in Resources */,
-				959AB0AF242A074A00883616 /* Main.storyboard in Resources */,
+				959AB0F0242C5F0800883616 /* Assets.xcassets in Resources */,
+				959AB0F3242C5F0800883616 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		029AB3D007A9AE8A789A842D /* [CP] Check Pods Manifest.lock */ = {
+		68CDD7EC321E2A6798BE5EB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A00E4B4B1AC4A0EEC7E99039 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,47 +275,35 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7BC6216BA2AB507342B15C41 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageCompress/Pods-ImageCompress-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		959AB09E242A074800883616 /* Sources */ = {
+		959AB0E4242C5F0600883616 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				959AB0DB242BC91500883616 /* NSString+URL.m in Sources */,
-				959AB0AA242A074800883616 /* ViewController.m in Sources */,
-				959AB0D7242B871C00883616 /* MBProgressHUD.m in Sources */,
-				959AB0BC242A089800883616 /* HDImageCompressTool.m in Sources */,
-				959AB0B2242A074A00883616 /* main.m in Sources */,
-				959AB0D3242B871200883616 /* HDFileUtil.m in Sources */,
-				959AB0A7242A074800883616 /* AppDelegate.m in Sources */,
+				959AB128242C603500883616 /* HDImageCompressTool.m in Sources */,
+				956C7448242C848E00BE38C9 /* AlertHelper.swift in Sources */,
+				959AB126242C603500883616 /* NSString+URL.m in Sources */,
+				956C7444242C833100BE38C9 /* ViewController+DragDrop.swift in Sources */,
+				959AB118242C5FC400883616 /* WJDragDropView.swift in Sources */,
+				959AB129242C603500883616 /* MBProgressHUD.m in Sources */,
+				956C7446242C842000BE38C9 /* ViewController+Event.swift in Sources */,
+				959AB119242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift in Sources */,
+				959AB0EE242C5F0600883616 /* ViewController.swift in Sources */,
+				956C744A242C9AA400BE38C9 /* ViewController+KVO.swift in Sources */,
+				959AB127242C603500883616 /* HDFileUtil.m in Sources */,
+				959AB0EC242C5F0600883616 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		959AB0AD242A074A00883616 /* Main.storyboard */ = {
+		959AB0F1242C5F0800883616 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				959AB0AE242A074A00883616 /* Base */,
+				959AB0F2242C5F0800883616 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -283,7 +311,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		959AB0B4242A074A00883616 /* Debug */ = {
+		959AB0F6242C5F0800883616 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -338,10 +366,12 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		959AB0B5242A074A00883616 /* Release */ = {
+		959AB0F7242C5F0800883616 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -389,73 +419,86 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		959AB0B7242A074A00883616 /* Debug */ = {
+		959AB0F9242C5F0800883616 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDBE9679D70EFE981D44F087 /* Pods-ImageCompress.debug.xcconfig */;
+			baseConfigurationReference = 1FF948D06EFC7E96D4208F78 /* Pods-ImageCompress.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ImageCompress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		959AB0B8242A074A00883616 /* Release */ = {
+		959AB0FA242C5F0800883616 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49495B7296D1BB103D37A138 /* Pods-ImageCompress.release.xcconfig */;
+			baseConfigurationReference = E3C9F985CEFF6DB863AC1F37 /* Pods-ImageCompress.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ImageCompress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		959AB09D242A074800883616 /* Build configuration list for PBXProject "ImageCompress" */ = {
+		959AB0E3242C5F0600883616 /* Build configuration list for PBXProject "ImageCompress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				959AB0B4242A074A00883616 /* Debug */,
-				959AB0B5242A074A00883616 /* Release */,
+				959AB0F6242C5F0800883616 /* Debug */,
+				959AB0F7242C5F0800883616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		959AB0B6242A074A00883616 /* Build configuration list for PBXNativeTarget "ImageCompress" */ = {
+		959AB0F8242C5F0800883616 /* Build configuration list for PBXNativeTarget "ImageCompress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				959AB0B7242A074A00883616 /* Debug */,
-				959AB0B8242A074A00883616 /* Release */,
+				959AB0F9242C5F0800883616 /* Debug */,
+				959AB0FA242C5F0800883616 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 959AB09A242A074800883616 /* Project object */;
+	rootObject = 959AB0E0242C5F0600883616 /* Project object */;
 }

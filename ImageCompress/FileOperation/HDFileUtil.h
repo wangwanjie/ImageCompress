@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 递归获取文件列表
 /// @param path 路径
-+ (NSArray *)getFileListRecursively:(NSString *)path;
++ (NSArray<NSString *> *)getFileListRecursively:(NSString *)path;
 
 /// 移动文件/文件夹
 /// @param fromPath 源路径
