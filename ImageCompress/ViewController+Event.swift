@@ -18,15 +18,14 @@ extension ViewController {
                 for subFilePath in allFileInDirAndSubDir {
                     let subFileURL = URL(string: (subFilePath as NSString).hd_URLEncoded())
                     let pathExtension = subFileURL?.pathExtension
-                    if let pathExtension = pathExtension {
+                    if let pathExtension = pathExtension?.lowercased() {
                         if supportTypes.contains(pathExtension) {
                             finalList.append(subFileURL!)
                         }
                     }
                 }
             } else {
-                let pathExtension = url.pathExtension
-
+                let pathExtension = url.pathExtension.lowercased()
                 if supportTypes.contains(pathExtension) {
                     finalList.append(URL(string: (url.path as NSString).hd_URLEncoded())!)
                 }
