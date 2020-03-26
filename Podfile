@@ -7,5 +7,6 @@ target 'ImageCompress' do
 
   # Pods for ImageCompress
   pod 'SnapKit'
+  pod 'Sparkle'
 
 end

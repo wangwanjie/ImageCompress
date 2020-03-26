@@ -7,14 +7,32 @@
 //
 
 import Cocoa
+import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    @IBOutlet var helpMenu: NSMenuItem!
+//    @IBOutlet weak var updaterMenuItem: NSMenuItem!
     func applicationDidFinishLaunching(_: Notification) {
-        // Insert code here to initialize your application
+        helpMenu.action = #selector(showHelp)
+        helpMenu.target = self
+
+        SUUpdater.shared()?.delegate = self
+        SUUpdater.shared()?.sendsSystemProfile = true
+        SUUpdater.shared()?.checkForUpdatesInBackground()
+//        updaterMenuItem.action = #selector(checkNewVersion)
+//        updaterMenuItem.target = self
     }
 
     func applicationWillTerminate(_: Notification) {
         // Insert code here to tear down your application
     }
+
+    @objc func showHelp() {
+        NSWorkspace.shared.open(URL(string: "https://github.com/wangwanjie/ImageCompress")!)
+    }
+
+    @objc func checkNewVersion() {}
 }
+
+extension AppDelegate: SUUpdaterDelegate {}

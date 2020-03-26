@@ -11,6 +11,8 @@
 		956C7446242C842000BE38C9 /* ViewController+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7445242C842000BE38C9 /* ViewController+Event.swift */; };
 		956C7448242C848E00BE38C9 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7447242C848E00BE38C9 /* AlertHelper.swift */; };
 		956C744A242C9AA400BE38C9 /* ViewController+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7449242C9AA400BE38C9 /* ViewController+KVO.swift */; };
+		956C744E242CB4DF00BE38C9 /* HDAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C744D242CB4DF00BE38C9 /* HDAlert.m */; };
+		956C7453242CB83400BE38C9 /* ICWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7452242CB83400BE38C9 /* ICWindowViewController.swift */; };
 		959AB0EC242C5F0600883616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0EB242C5F0600883616 /* AppDelegate.swift */; };
 		959AB0EE242C5F0600883616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0ED242C5F0600883616 /* ViewController.swift */; };
 		959AB0F0242C5F0800883616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0EF242C5F0800883616 /* Assets.xcassets */; };
@@ -31,6 +33,9 @@
 		956C7445242C842000BE38C9 /* ViewController+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Event.swift"; sourceTree = "<group>"; };
 		956C7447242C848E00BE38C9 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		956C7449242C9AA400BE38C9 /* ViewController+KVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+KVO.swift"; sourceTree = "<group>"; };
+		956C744C242CB4DF00BE38C9 /* HDAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDAlert.h; sourceTree = "<group>"; };
+		956C744D242CB4DF00BE38C9 /* HDAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDAlert.m; sourceTree = "<group>"; };
+		956C7452242CB83400BE38C9 /* ICWindowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICWindowViewController.swift; sourceTree = "<group>"; };
 		959AB0E8242C5F0600883616 /* ImageCompress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCompress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AB0EB242C5F0600883616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959AB0ED242C5F0600883616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +86,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		956C744B242CB4D300BE38C9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				956C744C242CB4DF00BE38C9 /* HDAlert.h */,
+				956C744D242CB4DF00BE38C9 /* HDAlert.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		959AB0DF242C5F0600883616 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +116,7 @@
 		959AB0EA242C5F0600883616 /* ImageCompress */ = {
 			isa = PBXGroup;
 			children = (
+				956C744B242CB4D300BE38C9 /* Vendor */,
 				959AB115242C5FC400883616 /* WJDragDropView */,
 				959AB11A242C603400883616 /* Category */,
 				959AB11D242C603400883616 /* FileOperation */,
@@ -118,6 +133,7 @@
 				956C7445242C842000BE38C9 /* ViewController+Event.swift */,
 				956C7447242C848E00BE38C9 /* AlertHelper.swift */,
 				956C7449242C9AA400BE38C9 /* ViewController+KVO.swift */,
+				956C7452242CB83400BE38C9 /* ICWindowViewController.swift */,
 			);
 			path = ImageCompress;
 			sourceTree = "<group>";
@@ -282,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956C744E242CB4DF00BE38C9 /* HDAlert.m in Sources */,
 				959AB128242C603500883616 /* HDImageCompressTool.m in Sources */,
 				956C7448242C848E00BE38C9 /* AlertHelper.swift in Sources */,
 				959AB126242C603500883616 /* NSString+URL.m in Sources */,
+				956C7453242CB83400BE38C9 /* ICWindowViewController.swift in Sources */,
 				956C7444242C833100BE38C9 /* ViewController+DragDrop.swift in Sources */,
 				959AB118242C5FC400883616 /* WJDragDropView.swift in Sources */,
 				959AB129242C603500883616 /* MBProgressHUD.m in Sources */,
@@ -442,7 +460,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
@@ -469,7 +487,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";

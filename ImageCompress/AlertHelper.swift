@@ -8,10 +8,10 @@
 
 import Foundation
 
-func showAlert(style: NSAlert.Style, message: String, informativeText: String) {
-    let alert = NSAlert()
-    alert.alertStyle = style
-    alert.messageText = message
-    alert.informativeText = informativeText
-    alert.runModal()
+func showAlert(style _: NSAlert.Style, message: String, informativeText: String) {
+    let alert = HDAlert(title: message, message: informativeText, style: .warning)
+    alert?.addCommonButton(withTitle: "确定", handler: { _ in
+
+    })
+    alert?.show(NSApplication.shared.keyWindow)
 }
