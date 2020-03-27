@@ -11,6 +11,14 @@ import Foundation
 extension ViewController {
     // MARK: - KVO
 
+    func addDataSourceObserver() {
+        addObserver(self, forKeyPath: "dataSource", options: [.old, .new], context: nil)
+    }
+
+    func removeDataSourceObserver() {
+        removeObserver(self, forKeyPath: "dataSource")
+    }
+
     override func observeValue(forKeyPath keyPath: String?, of _: Any?, change: [NSKeyValueChangeKey: Any]?, context _: UnsafeMutableRawPointer?) {
         if let keyPath = keyPath, keyPath == "dataSource" {
             let newValue = change?[NSKeyValueChangeKey.newKey] as? [URL]

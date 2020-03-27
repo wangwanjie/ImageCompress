@@ -17,6 +17,12 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupSubViews()
+        addDataSourceObserver()
+    }
+
+    fileprivate func setupSubViews() {
         view.addSubview(selectButton)
         view.addSubview(exportButton)
         view.addSubview(limitTitle)
@@ -24,7 +30,7 @@ class ViewController: NSViewController {
         view.addSubview(unitTip)
         view.addSubview(clearButton)
         view.addSubview(introduceLabel)
-        view.addSubview(tableView)
+        view.addSubview(tableViewContainer)
         view.addSubview(deleteButton)
 
         dragDropView = WJDragDropView()
@@ -32,26 +38,24 @@ class ViewController: NSViewController {
 
         dragDropView.acceptedFileExtensions = supportTypes
         dragDropView.delegate = self
-
-        addObserver(self, forKeyPath: "dataSource", options: [.old, .new], context: nil)
     }
 
     deinit {
-        self.removeObserver(self, forKeyPath: "dataSource")
+        removeDataSourceObserver()
     }
 
     // MARK: - 懒加载
 
-    @objc lazy var dataSource: [URL] = {
+    @objc dynamic lazy var dataSource: [URL] = {
         Array()
     }()
 
-    @objc lazy var tableViewContainer: NSScrollView = {
+    lazy var tableViewContainer: NSScrollView = {
         let tableViewContainer = NSScrollView()
         tableViewContainer.drawsBackground = true
         tableViewContainer.hasVerticalScroller = true
-        tableViewContainer.hasHorizontalRuler = true
-        tableViewContainer.documentView = self.tableView
+        tableViewContainer.autohidesScrollers = false
+        tableViewContainer.documentView = tableView
         return tableViewContainer
     }()
 
@@ -70,8 +74,8 @@ class ViewController: NSViewController {
         let column1 = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: ViewController.tableColumn1ItemIdentifier))
         column1.title = "图片路径"
         column1.width = self.view.frame.size.width
+        column1.minWidth = 1000
         tableView.addTableColumn(column1)
-
         return tableView
     }()
 
@@ -175,9 +179,11 @@ extension ViewController {
     override func updateViewConstraints() {
         super.updateViewConstraints()
 
+        let sideMargin = 20
+
         selectButton.snp.makeConstraints { make in
-            make.left.equalTo(20)
-            make.top.equalTo(20)
+            make.left.equalTo(view).offset(sideMargin)
+            make.top.equalTo(view).offset(sideMargin)
             make.size.equalTo(NSSize(width: 200, height: 40))
         }
 
@@ -187,56 +193,57 @@ extension ViewController {
         }
 
         limitTitle.snp.makeConstraints { make in
-            make.left.equalTo(self.exportButton.snp_right).offset(30)
-            make.centerY.equalTo(self.exportButton)
+            make.left.equalTo(exportButton.snp_right).offset(30)
+            make.centerY.equalTo(exportButton)
             make.height.equalTo(30)
             make.width.equalTo(180)
         }
 
         textField.snp.makeConstraints { make in
-            make.left.equalTo(self.limitTitle.snp_right).offset(5)
-            make.centerY.equalTo(self.selectButton)
+            make.left.equalTo(limitTitle.snp_right).offset(5)
+            make.centerY.equalTo(selectButton)
             make.width.equalTo(100)
             make.height.equalTo(30)
         }
 
         unitTip.snp.makeConstraints { make in
-            make.left.equalTo(self.textField.snp_right).offset(5)
-            make.centerY.equalTo(self.textField)
+            make.left.equalTo(textField.snp_right).offset(5)
+            make.centerY.equalTo(textField)
             make.height.equalTo(30)
             make.width.equalTo(35)
         }
 
         clearButton.snp.makeConstraints { make in
-            make.left.equalTo(self.unitTip.snp_right).offset(30)
-            make.top.equalTo(self.selectButton)
-            make.size.equalTo(self.selectButton)
+            make.left.equalTo(unitTip.snp_right).offset(30)
+            make.top.equalTo(selectButton)
+            make.size.equalTo(selectButton)
+            make.right.lessThanOrEqualTo(view.snp_right).offset(-sideMargin)
         }
 
         introduceLabel.sizeToFit()
         introduceLabel.snp.makeConstraints { make in
-            make.left.equalTo(self.selectButton)
-            make.right.equalTo(self.clearButton)
-            make.top.equalTo(self.selectButton.snp_bottom).offset(10)
+            make.left.equalTo(view).offset(20)
+            make.right.equalTo(view).offset(-20)
+            make.top.equalTo(selectButton.snp_bottom).offset(10)
         }
 
-        tableView.snp.makeConstraints { make in
-            make.top.equalTo(self.introduceLabel.snp_bottom).offset(20)
-            make.height.equalTo(500)
-            make.width.equalTo(1200)
-            make.centerX.width.equalTo(self.view)
+        tableViewContainer.snp.makeConstraints { make in
+            make.top.equalTo(introduceLabel.snp_bottom).offset(20)
+            make.left.right.equalTo(view)
+            make.height.greaterThanOrEqualTo(500)
+            make.bottom.equalTo(deleteButton.snp_top).offset(-10)
         }
 
         deleteButton.snp.makeConstraints { make in
-            make.centerX.equalTo(self.view)
+            make.centerX.equalTo(view)
             make.width.equalTo(400)
             make.height.equalTo(30)
-            make.bottom.equalTo(self.view).offset(-10)
-            make.top.equalTo(self.tableView.snp_bottom).offset(10)
+            make.bottom.equalTo(view).offset(-10)
         }
 
         dragDropView.snp.makeConstraints { make in
-            make.center.equalTo(self.tableView)
+            make.centerX.equalTo(tableViewContainer)
+            make.centerY.equalTo(tableViewContainer).offset(30)
             make.size.equalTo(NSSize(width: 400, height: 400))
         }
     }
