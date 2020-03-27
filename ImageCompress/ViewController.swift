@@ -19,6 +19,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         setupSubViews()
+
         addDataSourceObserver()
     }
 
@@ -72,7 +73,7 @@ class ViewController: NSViewController {
 
         tableView.gridColor = .magenta
         let column1 = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: ViewController.tableColumn1ItemIdentifier))
-        column1.title = "图片路径"
+        column1.title = "    \(localizedDefault(key: "imagePath"))"
         column1.width = self.view.frame.size.width
         column1.minWidth = 1000
         tableView.addTableColumn(column1)
@@ -81,7 +82,7 @@ class ViewController: NSViewController {
 
     lazy var selectButton: NSButton = {
         let button = NSButton()
-        button.title = "选择图片(支持多选)"
+        button.title = localizedDefault(key: "home.chooseImage")
         button.font = NSFont.systemFont(ofSize: 20)
         button.target = self
         button.action = #selector(selectButtonClickedHandler)
@@ -90,7 +91,7 @@ class ViewController: NSViewController {
 
     lazy var exportButton: NSButton = {
         let button = NSButton()
-        button.title = "开始转换"
+        button.title = localizedDefault(key: "home.exportImage")
         button.font = NSFont.systemFont(ofSize: 20)
         button.target = self
         button.action = #selector(exportButtonClickedHandler)
@@ -99,7 +100,7 @@ class ViewController: NSViewController {
 
     lazy var clearButton: NSButton = {
         let button = NSButton()
-        button.title = "清空已选"
+        button.title = localizedDefault(key: "clearSelected")
         button.font = NSFont.systemFont(ofSize: 20)
         button.target = self
         button.action = #selector(clearButtonClickedHandler)
@@ -108,7 +109,7 @@ class ViewController: NSViewController {
 
     lazy var deleteButton: NSButton = {
         let button = NSButton()
-        button.title = "删除选中项"
+        button.title = localizedDefault(key: "deleteSelectedItems")
         button.font = NSFont.systemFont(ofSize: 20)
         button.target = self
         button.action = #selector(deleteButtonClickedHandler)
@@ -127,7 +128,7 @@ class ViewController: NSViewController {
         textField.isEditable = false
         textField.isBezeled = false
         textField.font = NSFont.systemFont(ofSize: 20)
-        textField.stringValue = "单张图片大小限制:"
+        textField.stringValue = localizedDefault(key: "singleImageLimitSizeTip")
         textField.backgroundColor = .clear
         return textField
     }()
@@ -147,7 +148,7 @@ class ViewController: NSViewController {
         textField.isEditable = false
         textField.isBezeled = false
         textField.font = NSFont.systemFont(ofSize: 18)
-        textField.stringValue = "注意：右上角输入框输入单张图片限制大小，默认为不超过 500KB，图片支持 jpg、jpeg、png，支持文件和文件夹混合选择或者混合拖拽，如果选择或者拖拽的文件包含文件夹，将递归获取该文件夹下所有的图片（支持格式范围内），会自动去重，如果目标保存目录有同名文件也会覆盖"
+        textField.stringValue = localizedDefault(key: "appFunctionTip")
         textField.backgroundColor = .clear
         return textField
     }()

@@ -62,15 +62,15 @@ extension ViewController {
 
     @objc func exportButtonClickedHandler() {
         guard dataSource.count > 0 else {
-            showAlert(style: .warning, message: "还未选择图片", informativeText: "请选择图片")
+            showAlert(style: .warning, message: localizedDefault(key: "noImageChoosedTip"), informativeText: localizedDefault(key: "pleaseChooseImageTip"))
             return
         }
         let panel = NSSavePanel()
         if let path = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, false).first {
             panel.directoryURL = URL(fileURLWithPath: path)
         }
-        panel.nameFieldStringValue = String("图片名.\(dataSource.first!.pathExtension)")
-        panel.message = "请选择保存的路径"
+        panel.nameFieldStringValue = String("\(localizedDefault(key: "imageName")).\(dataSource.first!.pathExtension)")
+        panel.message = localizedDefault(key: "chooseSavePath")
         panel.isExtensionHidden = false
         panel.canCreateDirectories = true
 
@@ -116,13 +116,13 @@ extension ViewController {
 
     func dissmissLoadingAndShowFinishTip(panel: NSSavePanel) {
         MBProgressHUD.hideAllHUDs(for: view, animated: true)
-        let alert = HDAlert(title: "转换成功", message: "是否打开导出目录", style: .critical)
-        alert?.addCommonButton(withTitle: "在 Finder 中打开", handler: { _ in
+        let alert = HDAlert(title: localizedDefault(key: "processScuceesd"), message: localizedDefault(key: "shouldOpenExportDir"), style: .critical)
+        alert?.addCommonButton(withTitle: localizedDefault(key: "openInFinder"), handler: { _ in
             if let directoryURL = panel.directoryURL {
                 NSWorkspace.shared.openFile(directoryURL.path, withApplication: "Finder")
             }
         })
-        alert?.addCommonButton(withTitle: "取消", handler: { _ in
+        alert?.addCommonButton(withTitle: localizedButton(key: "cancel"), handler: { _ in
 
         })
         alert?.show(NSApplication.shared.keyWindow)
@@ -135,7 +135,7 @@ extension ViewController {
 
     @objc func deleteButtonClickedHandler() {
         guard tableView.numberOfSelectedRows > 0 else {
-            showAlert(style: .warning, message: "无选中项", informativeText: "请先选择图片")
+            showAlert(style: .warning, message: localizedDefault(key: "noImageSelected"), informativeText: localizedDefault(key: "pleasgeChooseImageFirst"))
             return
         }
         var results = [URL]()

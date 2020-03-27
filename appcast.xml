@@ -6,6 +6,23 @@
         <description>图片批量压缩工具，运行于 Mac OS，支持文件、文件夹混合选择或者混合拖拽</description>
         <language>en</language>
         <item>
+            <title>Version 1.8</title>
+            <description><![CDATA[<ul>
+                <li>支持多语言</li>
+                </ul>
+            ]]></description>
+            <pubDate>2020-03-27 17:22:46 GMT</pubDate>
+            <enclosure
+                url="https://raw.githubusercontent.com/wangwanjie/ImageCompress/master/release/ImageCompress1.8.app.zip"
+                sparkle:shortVersionString="1.8"
+                sparkle:version="2020032702"
+                length="7328561"
+                type="application/octet-stream"
+                sparkle:edSignature="mrjmBaogxpwWlsW8s5+fnEz7rsnGEue8EVpIoOGSclmvhVueV6t3ZZkwfaiQaeuA5srqXrYZS4SWVe2hsdP8AQ=="
+            />
+            <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
+        </item>
+        <item>
             <title>Version 1.7</title>
             <description><![CDATA[<ul>
                 <li>支持全屏使用</li>

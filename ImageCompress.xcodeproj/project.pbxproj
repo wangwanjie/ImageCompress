@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9563888F242DE15A0095ABC5 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95638889242DE15A0095ABC5 /* String+Localized.swift */; };
+		95638890242DE15A0095ABC5 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563888A242DE15A0095ABC5 /* Localize.swift */; };
+		95638893242DE15A0095ABC5 /* String+LanguageItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563888E242DE15A0095ABC5 /* String+LanguageItems.swift */; };
+		956388BE242DE6DF0095ABC5 /* LocalizableResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 956388B2242DE6DF0095ABC5 /* LocalizableResource.bundle */; };
+		956388BF242DE6DF0095ABC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 956388B4242DE6DF0095ABC5 /* Main.storyboard */; };
+		956388C0242DE6DF0095ABC5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 956388B6242DE6DF0095ABC5 /* InfoPlist.strings */; };
 		956C7444242C833100BE38C9 /* ViewController+DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7443242C833100BE38C9 /* ViewController+DragDrop.swift */; };
 		956C7446242C842000BE38C9 /* ViewController+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7445242C842000BE38C9 /* ViewController+Event.swift */; };
 		956C7448242C848E00BE38C9 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956C7447242C848E00BE38C9 /* AlertHelper.swift */; };
@@ -15,7 +21,6 @@
 		959AB0EC242C5F0600883616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0EB242C5F0600883616 /* AppDelegate.swift */; };
 		959AB0EE242C5F0600883616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB0ED242C5F0600883616 /* ViewController.swift */; };
 		959AB0F0242C5F0800883616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0EF242C5F0800883616 /* Assets.xcassets */; };
-		959AB0F3242C5F0800883616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959AB0F1242C5F0800883616 /* Main.storyboard */; };
 		959AB118242C5FC400883616 /* WJDragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB116242C5FC400883616 /* WJDragDropView.swift */; };
 		959AB119242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB117242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift */; };
 		959AB126242C603500883616 /* NSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 959AB11B242C603400883616 /* NSString+URL.m */; };
@@ -28,6 +33,18 @@
 /* Begin PBXFileReference section */
 		15580348F160DE27711FBEBB /* Pods_ImageCompress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF948D06EFC7E96D4208F78 /* Pods-ImageCompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.debug.xcconfig"; sourceTree = "<group>"; };
+		95638889242DE15A0095ABC5 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		9563888A242DE15A0095ABC5 /* Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
+		9563888E242DE15A0095ABC5 /* String+LanguageItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LanguageItems.swift"; sourceTree = "<group>"; };
+		956388B3242DE6DF0095ABC5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "zh-Hans"; path = "zh-Hans.lproj/LocalizableResource.bundle"; sourceTree = "<group>"; };
+		956388B5242DE6DF0095ABC5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		956388B7242DE6DF0095ABC5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		956388B8242DE6DF0095ABC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = en; path = en.lproj/LocalizableResource.bundle; sourceTree = "<group>"; };
+		956388B9242DE6DF0095ABC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		956388BA242DE6DF0095ABC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		956388BB242DE6DF0095ABC5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "zh-Hant"; path = "zh-Hant.lproj/LocalizableResource.bundle"; sourceTree = "<group>"; };
+		956388BC242DE6DF0095ABC5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		956388BD242DE6DF0095ABC5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		956C7443242C833100BE38C9 /* ViewController+DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+DragDrop.swift"; sourceTree = "<group>"; };
 		956C7445242C842000BE38C9 /* ViewController+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Event.swift"; sourceTree = "<group>"; };
 		956C7447242C848E00BE38C9 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
@@ -38,7 +55,6 @@
 		959AB0EB242C5F0600883616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959AB0ED242C5F0600883616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		959AB0EF242C5F0800883616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		959AB0F2242C5F0800883616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		959AB0F4242C5F0800883616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		959AB0F5242C5F0800883616 /* ImageCompress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageCompress.entitlements; sourceTree = "<group>"; };
 		959AB0FB242C5F2D00883616 /* ImageCompress-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageCompress-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -84,9 +100,30 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		95638888242DE15A0095ABC5 /* LanguageManager */ = {
+			isa = PBXGroup;
+			children = (
+				95638889242DE15A0095ABC5 /* String+Localized.swift */,
+				9563888A242DE15A0095ABC5 /* Localize.swift */,
+				9563888E242DE15A0095ABC5 /* String+LanguageItems.swift */,
+			);
+			path = LanguageManager;
+			sourceTree = "<group>";
+		};
+		956388B1242DE6DF0095ABC5 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				956388B2242DE6DF0095ABC5 /* LocalizableResource.bundle */,
+				956388B4242DE6DF0095ABC5 /* Main.storyboard */,
+				956388B6242DE6DF0095ABC5 /* InfoPlist.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		956C744B242CB4D300BE38C9 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				95638888242DE15A0095ABC5 /* LanguageManager */,
 				956C744C242CB4DF00BE38C9 /* HDAlert.h */,
 				956C744D242CB4DF00BE38C9 /* HDAlert.m */,
 			);
@@ -114,6 +151,7 @@
 		959AB0EA242C5F0600883616 /* ImageCompress */ = {
 			isa = PBXGroup;
 			children = (
+				956388B1242DE6DF0095ABC5 /* Localizable */,
 				956C744B242CB4D300BE38C9 /* Vendor */,
 				959AB115242C5FC400883616 /* WJDragDropView */,
 				959AB11A242C603400883616 /* Category */,
@@ -125,7 +163,6 @@
 				959AB0EB242C5F0600883616 /* AppDelegate.swift */,
 				959AB0EF242C5F0800883616 /* Assets.xcassets */,
 				959AB0F4242C5F0800883616 /* Info.plist */,
-				959AB0F1242C5F0800883616 /* Main.storyboard */,
 				959AB0ED242C5F0600883616 /* ViewController.swift */,
 				956C7443242C833100BE38C9 /* ViewController+DragDrop.swift */,
 				956C7445242C842000BE38C9 /* ViewController+Event.swift */,
@@ -225,6 +262,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 959AB0DF242C5F0600883616;
 			productRefGroup = 959AB0E9242C5F0600883616 /* Products */;
@@ -241,8 +280,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956388BE242DE6DF0095ABC5 /* LocalizableResource.bundle in Resources */,
+				956388C0242DE6DF0095ABC5 /* InfoPlist.strings in Resources */,
+				956388BF242DE6DF0095ABC5 /* Main.storyboard in Resources */,
 				959AB0F0242C5F0800883616 /* Assets.xcassets in Resources */,
-				959AB0F3242C5F0800883616 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,13 +340,16 @@
 				959AB128242C603500883616 /* HDImageCompressTool.m in Sources */,
 				956C7448242C848E00BE38C9 /* AlertHelper.swift in Sources */,
 				959AB126242C603500883616 /* NSString+URL.m in Sources */,
+				9563888F242DE15A0095ABC5 /* String+Localized.swift in Sources */,
 				956C7444242C833100BE38C9 /* ViewController+DragDrop.swift in Sources */,
 				959AB118242C5FC400883616 /* WJDragDropView.swift in Sources */,
 				959AB129242C603500883616 /* MBProgressHUD.m in Sources */,
+				95638893242DE15A0095ABC5 /* String+LanguageItems.swift in Sources */,
 				956C7446242C842000BE38C9 /* ViewController+Event.swift in Sources */,
 				959AB119242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift in Sources */,
 				959AB0EE242C5F0600883616 /* ViewController.swift in Sources */,
 				956C744A242C9AA400BE38C9 /* ViewController+KVO.swift in Sources */,
+				95638890242DE15A0095ABC5 /* Localize.swift in Sources */,
 				959AB127242C603500883616 /* HDFileUtil.m in Sources */,
 				959AB0EC242C5F0600883616 /* AppDelegate.swift in Sources */,
 			);
@@ -314,12 +358,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		959AB0F1242C5F0800883616 /* Main.storyboard */ = {
+		956388B2242DE6DF0095ABC5 /* LocalizableResource.bundle */ = {
 			isa = PBXVariantGroup;
 			children = (
-				959AB0F2242C5F0800883616 /* Base */,
+				956388B3242DE6DF0095ABC5 /* zh-Hans */,
+				956388B8242DE6DF0095ABC5 /* en */,
+				956388BB242DE6DF0095ABC5 /* zh-Hant */,
+			);
+			name = LocalizableResource.bundle;
+			sourceTree = "<group>";
+		};
+		956388B4242DE6DF0095ABC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				956388B5242DE6DF0095ABC5 /* zh-Hans */,
+				956388B9242DE6DF0095ABC5 /* en */,
+				956388BC242DE6DF0095ABC5 /* zh-Hant */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		956388B6242DE6DF0095ABC5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				956388B7242DE6DF0095ABC5 /* zh-Hans */,
+				956388BA242DE6DF0095ABC5 /* en */,
+				956388BD242DE6DF0095ABC5 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -329,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -389,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -447,7 +515,7 @@
 				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2020032701;
+				CURRENT_PROJECT_VERSION = 2020032702;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ImageCompress/Info.plist;
@@ -457,7 +525,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
@@ -475,7 +543,7 @@
 				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2020032701;
+				CURRENT_PROJECT_VERSION = 2020032702;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ImageCompress/Info.plist;
@@ -485,7 +553,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.7;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";

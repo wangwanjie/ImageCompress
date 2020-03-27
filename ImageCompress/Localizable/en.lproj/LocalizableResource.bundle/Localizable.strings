@@ -1,0 +1,16 @@
+"home.chooseImage" = "Choose image(s)";
+"home.exportImage" = "Export image(s)";
+"imagePath" = "Image path";
+"clearSelected" = "Clear selected";
+"deleteSelectedItems" = "Remove selected";
+"singleImageLimitSizeTip" = "Single limited in:";
+"appFunctionTip" = "Note: The input size of the single picture in the upper right corner is limited to 500KB by default. The picture supports jpg, jpeg, png, and mixed selection and dragging of files and folders. Recursively get all the pictures in the folder (within the supported format range), and it will automatically remove the duplicates, if the destination save directory has a file with the same name, it will be overwritten";
+"noImageChoosedTip" = "No image selected";
+"pleaseChooseImageTip" = "Please select a picture";
+"chooseSavePath" = "Please select a save path";
+"imageName" = "Image Name";
+"processScuceesd" = "Processed successfully";
+"shouldOpenExportDir" = "Do you want to open the export directory?";
+"openInFinder" = "Open in Finder";
+"noImageSelected" = "No selected item";
+"pleasgeChooseImageFirst" = "Please select an image first";

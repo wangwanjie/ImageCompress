@@ -1,0 +1,16 @@
+"home.chooseImage" = "選擇圖片(支持多選)";
+"home.exportImage" = "導出圖片";
+"imagePath" = "圖片路徑";
+"clearSelected" = "清空已選";
+"deleteSelectedItems" = "刪除選中項";
+"singleImageLimitSizeTip" = "單張圖片大小限制:";
+"appFunctionTip" = "注意：右上角輸入框輸入單張圖片限制大小，默認為不超過500KB，圖片支持jpg、jpeg、png，支持文件和文件夾混合選擇或者混合拖拽，如果選擇或者拖拽的文件包含文件夾，將遞歸獲取該文件夾下所有的圖片（支持格式範圍內），會自動去重，如果目標保存目錄有同名文件也會覆蓋";
+"noImageChoosedTip" = "還未選擇圖片";
+"pleaseChooseImageTip" = "請選擇圖片";
+"chooseSavePath" = "請選擇保存的路徑";
+"imageName" = "圖片名";
+"processScuceesd" = "處理成功";
+"shouldOpenExportDir" = "是否打開導出目錄？";
+"openInFinder" = "在 Finder 中打開";
+"noImageSelected" = "無選中項";
+"pleasgeChooseImageFirst" = "請先選擇圖片";
