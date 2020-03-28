@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953F5CE3242FAAB000CEC9F2 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953F5CE2242FAAAF00CEC9F2 /* Array+Extension.swift */; };
 		9563888F242DE15A0095ABC5 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95638889242DE15A0095ABC5 /* String+Localized.swift */; };
 		95638890242DE15A0095ABC5 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563888A242DE15A0095ABC5 /* Localize.swift */; };
 		95638893242DE15A0095ABC5 /* String+LanguageItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563888E242DE15A0095ABC5 /* String+LanguageItems.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		15580348F160DE27711FBEBB /* Pods_ImageCompress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF948D06EFC7E96D4208F78 /* Pods-ImageCompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.debug.xcconfig"; sourceTree = "<group>"; };
+		953F5CE2242FAAAF00CEC9F2 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		95638889242DE15A0095ABC5 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		9563888A242DE15A0095ABC5 /* Localize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		9563888E242DE15A0095ABC5 /* String+LanguageItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LanguageItems.swift"; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		953F5CE1242FAA9F00CEC9F2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				953F5CE2242FAAAF00CEC9F2 /* Array+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		95638888242DE15A0095ABC5 /* LanguageManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		959AB0EA242C5F0600883616 /* ImageCompress */ = {
 			isa = PBXGroup;
 			children = (
+				953F5CE1242FAA9F00CEC9F2 /* Extension */,
 				956388B1242DE6DF0095ABC5 /* Localizable */,
 				956C744B242CB4D300BE38C9 /* Vendor */,
 				959AB115242C5FC400883616 /* WJDragDropView */,
@@ -345,6 +356,7 @@
 				959AB118242C5FC400883616 /* WJDragDropView.swift in Sources */,
 				959AB129242C603500883616 /* MBProgressHUD.m in Sources */,
 				95638893242DE15A0095ABC5 /* String+LanguageItems.swift in Sources */,
+				953F5CE3242FAAB000CEC9F2 /* Array+Extension.swift in Sources */,
 				956C7446242C842000BE38C9 /* ViewController+Event.swift in Sources */,
 				959AB119242C5FC400883616 /* NSDraggingInfo+FilePathURL.swift in Sources */,
 				959AB0EE242C5F0600883616 /* ViewController.swift in Sources */,
@@ -515,7 +527,7 @@
 				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2020032702;
+				CURRENT_PROJECT_VERSION = 2020032901;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ImageCompress/Info.plist;
@@ -525,7 +537,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
@@ -543,7 +555,7 @@
 				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2020032702;
+				CURRENT_PROJECT_VERSION = 2020032901;
 				DEVELOPMENT_TEAM = AUM2E6FK73;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = ImageCompress/Info.plist;
@@ -553,7 +565,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.8.5;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.vanjay.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";

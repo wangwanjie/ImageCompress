@@ -24,10 +24,11 @@ extension ViewController {
             let newValue = change?[NSKeyValueChangeKey.newKey] as? [URL]
 
             if newValue?.count ?? 0 > 0 {
-                selectButton.title = "继续添加"
+                selectButton.title = localizedDefault(key: "home.continueChoose")
             } else {
-                selectButton.title = "选择图片(支持多选)"
+                selectButton.title = localizedDefault(key: "home.chooseImage")
             }
+            itemsCountLabel.stringValue = "\(dataSource.count) items"
         }
     }
 }

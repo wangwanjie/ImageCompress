@@ -14,3 +14,8 @@
 "openInFinder" = "在 Finder 中打開";
 "noImageSelected" = "無選中項";
 "pleasgeChooseImageFirst" = "請先選擇圖片";
+"showInFinder" = "在 Finder 中顯示";
+"delete" = "刪除";
+"copyImagePath" = "複製圖片路徑";
+"singleExport" = "單獨導出";
+"quickLook" = "查看";

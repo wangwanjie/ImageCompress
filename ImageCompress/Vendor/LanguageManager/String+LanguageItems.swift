@@ -1,6 +1,6 @@
 //
 //  String+LanguageItems.swift
-//  ViPay
+//  ImageCompress
 //
 //  Created by VanJay on 2019/6/28.
 //  Copyright © 2019 VanJay. All rights reserved.

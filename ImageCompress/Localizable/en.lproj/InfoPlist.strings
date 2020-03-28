@@ -1,14 +1,14 @@
 /* 
   InfoPlist.strings
-  ViPay
+  ImageCompress
 
   Created by VanJay on 2019/6/25.
   Copyright © 2019 VanJay. All rights reserved.
 */
-CFBundleDisplayName               = "ViPay";
-NSCameraUsageDescription          = "ViPay needs to use your Camera to scan QR code and take photos.";
-NSPhotoLibraryAddUsageDescription = "Vipay needs to use your album to store photos.";
-NSPhotoLibraryUsageDescription    = "ViPay needs to access your Photos to detect QR code. ";
-NSContactsUsageDescription        = "ViPay needs to access your Contacts to assist you in getting phone number more quickly. ";
-NSLocationWhenInUseUsageDescription = "Vipay needs to use your location to discover your nearby stores";
-NSLocationAlwaysAndWhenInUseUsageDescription = "Vipay needs to use your location to discover your nearby stores";
+CFBundleDisplayName               = "ImageCompress";
+NSCameraUsageDescription          = "ImageCompress needs to use your Camera to scan QR code and take photos.";
+NSPhotoLibraryAddUsageDescription = "ImageCompress needs to use your album to store photos.";
+NSPhotoLibraryUsageDescription    = "ImageCompress needs to access your Photos to detect QR code. ";
+NSContactsUsageDescription        = "ImageCompress needs to access your Contacts to assist you in getting phone number more quickly. ";
+NSLocationWhenInUseUsageDescription = "ImageCompress needs to use your location to discover your nearby stores";
+NSLocationAlwaysAndWhenInUseUsageDescription = "ImageCompress needs to use your location to discover your nearby stores";

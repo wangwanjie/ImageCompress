@@ -31,6 +31,7 @@ class ViewController: NSViewController {
         view.addSubview(unitTip)
         view.addSubview(clearButton)
         view.addSubview(introduceLabel)
+        view.addSubview(itemsCountLabel)
         view.addSubview(tableViewContainer)
         view.addSubview(deleteButton)
 
@@ -43,6 +44,15 @@ class ViewController: NSViewController {
 
     deinit {
         removeDataSourceObserver()
+    }
+
+    // MARK: - 右键点击
+
+    override func rightMouseDown(with event: NSEvent) {
+        if dataSource.count <= 0 { return }
+
+        let location = tableView.convert(event.locationInWindow, from: nil)
+        mainMenu.popUp(positioning: nil, at: location, in: tableView)
     }
 
     // MARK: - 懒加载
@@ -63,6 +73,8 @@ class ViewController: NSViewController {
     lazy var tableView: NSTableView = {
         let tableView = NSTableView()
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 20
         tableView.allowsMultipleSelection = true
         // tableview获得焦点时的风格
         tableView.focusRingType = .none
@@ -77,6 +89,8 @@ class ViewController: NSViewController {
         column1.width = self.view.frame.size.width
         column1.minWidth = 1000
         tableView.addTableColumn(column1)
+        // 双击事件
+        tableView.doubleAction = #selector(tableViewDoubleClicked)
         return tableView
     }()
 
@@ -152,7 +166,25 @@ class ViewController: NSViewController {
         textField.backgroundColor = .clear
         return textField
     }()
+
+    lazy var itemsCountLabel: NSTextField = {
+        let textField = NSTextField()
+        textField.isEditable = false
+        textField.isBezeled = false
+        textField.font = NSFont.systemFont(ofSize: 14)
+        textField.stringValue = "\(dataSource.count) items"
+        textField.backgroundColor = .clear
+        return textField
+    }()
+
+    lazy var mainMenu: NSMenu = {
+        let menu = NSMenu()
+        menu.delegate = self
+        return menu
+    }()
 }
+
+// MARK: - NSTableViewDataSource
 
 extension ViewController: NSTableViewDataSource {
     func numberOfRows(in _: NSTableView) -> Int {
@@ -163,14 +195,31 @@ extension ViewController: NSTableViewDataSource {
         let columnID = tableColumn?.identifier
         if columnID != nil, columnID?.rawValue == ViewController.tableColumn1ItemIdentifier {
             let url = dataSource[row]
-            return (url.path as NSString).hd_URLDecoded()
+            if dataSource.count > 1000 {
+                return String(format: "%04d: %@", row + 1, (url.path as NSString).hd_URLDecoded())
+            }
+            if dataSource.count > 100 {
+                return String(format: "%03d: %@", row + 1, (url.path as NSString).hd_URLDecoded())
+            }
+            if dataSource.count > 10 {
+                return String(format: "%02d: %@", row + 1, (url.path as NSString).hd_URLDecoded())
+            }
+            return String(format: "%d: %@", row + 1, (url.path as NSString).hd_URLDecoded())
         }
 
         return nil
     }
 
-    func tableView(_: NSTableView, heightOfRow _: Int) -> CGFloat {
-        return 50
+    @objc func tableViewDoubleClicked() {
+        quickLookImage()
+    }
+}
+
+// MARK: - NSTableViewDelegate
+
+extension ViewController: NSTableViewDelegate {
+    func tableView(_: NSTableView, shouldEdit _: NSTableColumn?, row _: Int) -> Bool {
+        return false
     }
 }
 
@@ -235,6 +284,13 @@ extension ViewController {
             make.bottom.equalTo(deleteButton.snp_top).offset(-10)
         }
 
+        itemsCountLabel.sizeToFit()
+        itemsCountLabel.snp.makeConstraints { make in
+            make.left.equalTo(view).offset(30)
+            make.width.equalTo(200)
+            make.centerY.equalTo(deleteButton)
+        }
+
         deleteButton.snp.makeConstraints { make in
             make.centerX.equalTo(view)
             make.width.equalTo(400)
@@ -244,8 +300,81 @@ extension ViewController {
 
         dragDropView.snp.makeConstraints { make in
             make.centerX.equalTo(tableViewContainer)
-            make.centerY.equalTo(tableViewContainer).offset(30)
-            make.size.equalTo(NSSize(width: 400, height: 400))
+            make.centerY.equalTo(tableViewContainer)
+            make.size.equalTo(NSSize(width: 300, height: 300))
         }
+    }
+}
+
+extension ViewController: NSMenuDelegate {
+    func menuWillOpen(_ menu: NSMenu) {
+        if menu == mainMenu {
+            var item: NSMenuItem?
+
+            let addMenuItem = { (tag: Int, key: String, action: Selector) in
+                item = menu.item(withTag: tag)
+                if item == nil {
+                    item = NSMenuItem(title: localizedDefault(key: key), action: action, keyEquivalent: "")
+                    item?.tag = tag
+                    item?.target = self
+                    menu.addItem(item!)
+                }
+            }
+            addMenuItem(1001, "showInFinder", #selector(showInFinder))
+            addMenuItem(1002, "copyImagePath", #selector(copyImagePath))
+            addMenuItem(1003, "delete", #selector(deleteImage))
+            addMenuItem(1004, "singleExport", #selector(singleExport))
+            addMenuItem(1005, "quickLook", #selector(quickLookImage))
+        }
+    }
+
+    // MARK: - 右键事件
+
+    @objc func quickLookImage() {
+        let clickedIndex = tableView.clickedRow
+        guard clickedIndex >= 0, clickedIndex < dataSource.count else {
+            return
+        }
+        let url = URL(fileURLWithPath: dataSource[clickedIndex].path)
+        NSWorkspace.shared.open([url], withAppBundleIdentifier: "com.apple.Preview", options: [.withoutAddingToRecents, .andHideOthers], additionalEventParamDescriptor: nil, launchIdentifiers: nil)
+    }
+
+    @objc func showInFinder() {
+        let clickedIndex = tableView.clickedRow
+        guard clickedIndex >= 0, clickedIndex < dataSource.count else {
+            return
+        }
+        let url = URL(fileURLWithPath: dataSource[clickedIndex].path)
+        NSWorkspace.shared.activateFileViewerSelecting([url])
+    }
+
+    @objc func singleExport() {
+        let clickedIndex = tableView.clickedRow
+        guard clickedIndex >= 0, clickedIndex < dataSource.count else {
+            return
+        }
+        let url = dataSource[clickedIndex]
+        exportImages(in: [url])
+    }
+
+    @objc func deleteImage() {
+        let clickedIndex = tableView.clickedRow
+        guard clickedIndex >= 0, clickedIndex < dataSource.count else {
+            return
+        }
+        var indexSet = IndexSet()
+        indexSet.insert(clickedIndex)
+        deleteItems(with: indexSet)
+    }
+
+    @objc func copyImagePath() {
+        let clickedIndex = tableView.clickedRow
+        guard clickedIndex >= 0, clickedIndex < dataSource.count else {
+            return
+        }
+        let url = dataSource[clickedIndex]
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(url.path, forType: .string)
     }
 }

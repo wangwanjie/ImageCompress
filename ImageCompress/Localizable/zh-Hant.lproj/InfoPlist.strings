@@ -1,14 +1,14 @@
 /* 
   InfoPlist.strings
-  ViPay
+  ImageCompress
 
   Created by VanJay on 2019/6/25.
   Copyright © 2019 VanJay. All rights reserved.
 */
-CFBundleDisplayName               = "ViPay";
-NSCameraUsageDescription          = "ViPay需要使用您的相机扫描二维码和拍照。";
-NSPhotoLibraryAddUsageDescription = "ViPay需要使用您的相册，帮您把图片保存到相册里。";
-NSPhotoLibraryUsageDescription    = "ViPay需要使用您的相册，识别您相册中的二维码。";
-NSContactsUsageDescription        = "ViPay想访问您的通讯录，帮您更快的获取手机号码。";
-NSLocationWhenInUseUsageDescription = "ViPay需要使用您的位置，为您推荐离您最近的门店";
-NSLocationAlwaysAndWhenInUseUsageDescription = "ViPay需要使用您的位置，为您推荐离您最近的门店";
+CFBundleDisplayName               = "ImageCompress";
+NSCameraUsageDescription          = "ImageCompress需要使用您的相机扫描二维码和拍照。";
+NSPhotoLibraryAddUsageDescription = "ImageCompress需要使用您的相册，帮您把图片保存到相册里。";
+NSPhotoLibraryUsageDescription    = "ImageCompress需要使用您的相册，识别您相册中的二维码。";
+NSContactsUsageDescription        = "ImageCompress想访问您的通讯录，帮您更快的获取手机号码。";
+NSLocationWhenInUseUsageDescription = "ImageCompress需要使用您的位置，为您推荐离您最近的门店";
+NSLocationAlwaysAndWhenInUseUsageDescription = "ImageCompress需要使用您的位置，为您推荐离您最近的门店";

@@ -1,4 +1,5 @@
 "home.chooseImage" = "选择图片(支持多选)";
+"home.continueChoose" = "继续添加";
 "home.exportImage" = "导出图片";
 "imagePath" = "图片路径";
 "clearSelected" = "清空已选";
@@ -14,3 +15,8 @@
 "openInFinder" = "在 Finder 中打开";
 "noImageSelected" = "无选中项";
 "pleasgeChooseImageFirst" = "请先选择图片";
+"showInFinder" = "在 Finder 中显示";
+"delete" = "删除";
+"copyImagePath" = "复制图片路径";
+"singleExport" = "单独导出";
+"quickLook" = "查看";

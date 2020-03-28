@@ -65,6 +65,51 @@ extension ViewController {
             showAlert(style: .warning, message: localizedDefault(key: "noImageChoosedTip"), informativeText: localizedDefault(key: "pleaseChooseImageTip"))
             return
         }
+        exportImages(in: dataSource)
+    }
+
+    func dissmissLoadingAndShowFinishTip(panel: NSSavePanel) {
+        MBProgressHUD.hideAllHUDs(for: view, animated: true)
+        let alert = HDAlert(title: localizedDefault(key: "processScuceesd"), message: localizedDefault(key: "shouldOpenExportDir"), style: .critical)
+        alert?.addCommonButton(withTitle: localizedDefault(key: "openInFinder"), handler: { _ in
+            if let directoryURL = panel.directoryURL {
+                NSWorkspace.shared.openFile(directoryURL.path, withApplication: "Finder")
+            }
+        })
+        alert?.addCommonButton(withTitle: localizedButton(key: "cancel"), handler: { _ in
+
+        })
+        alert?.show(NSApplication.shared.keyWindow)
+    }
+
+    @objc func clearButtonClickedHandler() {
+        dataSource.removeAll()
+        tableView.reloadData()
+    }
+
+    @objc func deleteButtonClickedHandler() {
+        guard tableView.numberOfSelectedRows > 0 else {
+            showAlert(style: .warning, message: localizedDefault(key: "noImageSelected"), informativeText: localizedDefault(key: "pleasgeChooseImageFirst"))
+            return
+        }
+
+        let selectedIndexSet = tableView.selectedRowIndexes
+        deleteItems(with: selectedIndexSet)
+    }
+
+    /// 删除指定 index 集合项，并刷新界面
+    /// - Parameter indexSet: index 集合
+    func deleteItems(with indexSet: IndexSet) {
+        for index in indexSet {
+            tableView.deselectRow(index)
+        }
+        dataSource.removeAtIndexes(indexes: indexSet)
+        tableView.reloadData()
+    }
+
+    /// 导出 URL 集合内的图片
+    /// - Parameter urlArray: URL 集合
+    func exportImages(in urlArray: [URL]) {
         let panel = NSSavePanel()
         if let path = NSSearchPathForDirectoriesInDomains(.desktopDirectory, .userDomainMask, false).first {
             panel.directoryURL = URL(fileURLWithPath: path)
@@ -92,7 +137,7 @@ extension ViewController {
             let limitedSize: CGFloat = CGFloat(Float(self.textField.stringValue) ?? 500)
 
             var image: NSImage?
-            for url in self.dataSource {
+            for url in urlArray {
                 image = NSImage(byReferencingFile: url.path)
                 if let image = image {
                     HDImageCompressTool.compressedImage(image, imageKB: limitedSize) { imageData in
@@ -104,7 +149,7 @@ extension ViewController {
                                 try! imageData.write(to: URL(fileURLWithPath: path))
                             }
                             index += 1
-                            if index >= self.dataSource.count {
+                            if index >= urlArray.count {
                                 self.dissmissLoadingAndShowFinishTip(panel: panel)
                             }
                         }
@@ -112,44 +157,5 @@ extension ViewController {
                 }
             }
         }
-    }
-
-    func dissmissLoadingAndShowFinishTip(panel: NSSavePanel) {
-        MBProgressHUD.hideAllHUDs(for: view, animated: true)
-        let alert = HDAlert(title: localizedDefault(key: "processScuceesd"), message: localizedDefault(key: "shouldOpenExportDir"), style: .critical)
-        alert?.addCommonButton(withTitle: localizedDefault(key: "openInFinder"), handler: { _ in
-            if let directoryURL = panel.directoryURL {
-                NSWorkspace.shared.openFile(directoryURL.path, withApplication: "Finder")
-            }
-        })
-        alert?.addCommonButton(withTitle: localizedButton(key: "cancel"), handler: { _ in
-
-        })
-        alert?.show(NSApplication.shared.keyWindow)
-    }
-
-    @objc func clearButtonClickedHandler() {
-        dataSource.removeAll()
-        tableView.reloadData()
-    }
-
-    @objc func deleteButtonClickedHandler() {
-        guard tableView.numberOfSelectedRows > 0 else {
-            showAlert(style: .warning, message: localizedDefault(key: "noImageSelected"), informativeText: localizedDefault(key: "pleasgeChooseImageFirst"))
-            return
-        }
-        var results = [URL]()
-        results.append(contentsOf: dataSource)
-        let selectedIndexSet = tableView.selectedRowIndexes
-
-        for i in 0 ..< selectedIndexSet.count {
-            if i < results.count {
-                let url = results[i]
-                print("删除: \(url.path)")
-            }
-
-            dataSource.remove(at: i)
-        }
-        tableView.reloadData()
     }
 }
