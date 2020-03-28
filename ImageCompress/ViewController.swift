@@ -238,50 +238,50 @@ extension ViewController {
         }
 
         exportButton.snp.makeConstraints { make in
-            make.left.equalTo(selectButton.snp_right).offset(30)
+            make.left.equalTo(selectButton.snp.right).offset(30)
             make.size.centerY.equalTo(selectButton)
         }
 
         limitTitle.snp.makeConstraints { make in
-            make.left.equalTo(exportButton.snp_right).offset(30)
+            make.left.equalTo(exportButton.snp.right).offset(30)
             make.centerY.equalTo(exportButton)
             make.height.equalTo(30)
             make.width.equalTo(180)
         }
 
         textField.snp.makeConstraints { make in
-            make.left.equalTo(limitTitle.snp_right).offset(5)
+            make.left.equalTo(limitTitle.snp.right).offset(5)
             make.centerY.equalTo(selectButton)
             make.width.equalTo(100)
             make.height.equalTo(30)
         }
 
         unitTip.snp.makeConstraints { make in
-            make.left.equalTo(textField.snp_right).offset(5)
+            make.left.equalTo(textField.snp.right).offset(5)
             make.centerY.equalTo(textField)
             make.height.equalTo(30)
             make.width.equalTo(35)
         }
 
         clearButton.snp.makeConstraints { make in
-            make.left.equalTo(unitTip.snp_right).offset(30)
+            make.left.equalTo(unitTip.snp.right).offset(30)
             make.top.equalTo(selectButton)
             make.size.equalTo(selectButton)
-            make.right.lessThanOrEqualTo(view.snp_right).offset(-sideMargin)
+            make.right.lessThanOrEqualTo(view.snp.right).offset(-sideMargin)
         }
 
         introduceLabel.sizeToFit()
         introduceLabel.snp.makeConstraints { make in
             make.left.equalTo(view).offset(20)
             make.right.equalTo(view).offset(-20)
-            make.top.equalTo(selectButton.snp_bottom).offset(10)
+            make.top.equalTo(selectButton.snp.bottom).offset(10)
         }
 
         tableViewContainer.snp.makeConstraints { make in
-            make.top.equalTo(introduceLabel.snp_bottom).offset(20)
+            make.top.equalTo(introduceLabel.snp.bottom).offset(20)
             make.left.right.equalTo(view)
             make.height.greaterThanOrEqualTo(500)
-            make.bottom.equalTo(deleteButton.snp_top).offset(-10)
+            make.bottom.equalTo(deleteButton.snp.top).offset(-10)
         }
 
         itemsCountLabel.sizeToFit()

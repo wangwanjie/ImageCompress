@@ -51,7 +51,7 @@
 
 #else  // !(TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
 
-#define MBLabelAlignmentCenter NSCenterTextAlignment
+#define MBLabelAlignmentCenter NSTextAlignmentCenter
 #define MB_TEXTSIZE(text, font) [text length] > 0 ? [text                                                \
                                                         sizeWithAttributes:@{NSFontAttributeName: font}] \
                                                   : CGSizeZero;
@@ -346,7 +346,7 @@ static const CGFloat kDetailsLabelFontSize = 12.0f;
 #else   // !(TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
         self.layer.opaque = NO;
         self.layer.backgroundColor = [self NSColorToCGColor:[NSColor clearColor]];
-        CGColorRelease(_cgColorFromNSColor), _cgColorFromNSColor = nil;
+        (void)(CGColorRelease(_cgColorFromNSColor)), _cgColorFromNSColor = nil;
         // Make it invisible for now
         self.alphaValue = 0.0f;
 #endif  // (TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
@@ -674,7 +674,7 @@ static const CGFloat kDetailsLabelFontSize = 12.0f;
     [self showAnimated:animated whileExecutingBlock:block onQueue:queue completionBlock:NULL];
 }
 
-- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block completionBlock:(void (^)())completion {
+- (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block completionBlock:(void (^)(void))completion {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     [self showAnimated:animated whileExecutingBlock:block onQueue:queue completionBlock:completion];
 }
@@ -1005,7 +1005,7 @@ static const CGFloat kDetailsLabelFontSize = 12.0f;
             CGContextSetFillColorWithColor(context, self.color.CGColor);
 #else   // !(TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
             CGContextSetFillColorWithColor(context, [self NSColorToCGColor:self.color]);
-            CGColorRelease(_cgColorFromNSColor), _cgColorFromNSColor = nil;
+            (void)(CGColorRelease(_cgColorFromNSColor)), _cgColorFromNSColor = nil;
 #endif  // (TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
         }
     } else {
@@ -1197,7 +1197,7 @@ static const CGFloat kDetailsLabelFontSize = 12.0f;
         _backgroundTintColor = [[UIColor alloc] initWithWhite:1.0f alpha:0.1f];
 #else   // !(TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
         self.layer.backgroundColor = [self NSColorToCGColor:[NSColor clearColor]];
-        CGColorRelease(_cgColorFromNSColor), _cgColorFromNSColor = nil;
+        (void)(CGColorRelease(_cgColorFromNSColor)), _cgColorFromNSColor = nil;
         self.layer.opaque = NO;
         _progress = 0.0f;
         _annular = NO;
@@ -1370,7 +1370,7 @@ static const CGFloat kDetailsLabelFontSize = 12.0f;
         _progressColor = [NSColor whiteColor];
         _progressRemainingColor = [NSColor clearColor];
         self.layer.backgroundColor = [self NSColorToCGColor:[NSColor clearColor]];
-        CGColorRelease(_cgColorFromNSColor), _cgColorFromNSColor = nil;
+        (void)(CGColorRelease(_cgColorFromNSColor)), _cgColorFromNSColor = nil;
         self.layer.opaque = NO;
 #endif  // (TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
         [self registerForKVO];
@@ -1423,9 +1423,9 @@ static const CGFloat kDetailsLabelFontSize = 12.0f;
     // setup properties
     CGContextSetLineWidth(context, 2);
     CGContextSetStrokeColorWithColor(context, [self NSColorToCGColor:_lineColor]);
-    CGColorRelease(_cgColorFromNSColor), _cgColorFromNSColor = nil;
+    (void)(CGColorRelease(_cgColorFromNSColor)), _cgColorFromNSColor = nil;
     CGContextSetFillColorWithColor(context, [self NSColorToCGColor:_progressRemainingColor]);
-    CGColorRelease(_cgColorFromNSColor), _cgColorFromNSColor = nil;
+    (void)(CGColorRelease(_cgColorFromNSColor)), _cgColorFromNSColor = nil;
 #endif  // (TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
 
     // draw line border
@@ -1454,7 +1454,7 @@ static const CGFloat kDetailsLabelFontSize = 12.0f;
     CGContextSetFillColorWithColor(context, [_progressColor CGColor]);
 #else   // !(TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
     CGContextSetFillColorWithColor(context, [self NSColorToCGColor:_progressColor]);
-    CGColorRelease(_cgColorFromNSColor), _cgColorFromNSColor = nil;
+    (void)(CGColorRelease(_cgColorFromNSColor)), _cgColorFromNSColor = nil;
 #endif  // (TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
     radius = radius - 2;
     float amount = self.progress * rect.size.width;
