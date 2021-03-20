@@ -522,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FF948D06EFC7E96D4208F78 /* Pods-ImageCompress.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
@@ -550,6 +551,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3C9F985CEFF6DB863AC1F37 /* Pods-ImageCompress.release.xcconfig */;
 			buildSettings = {
+				ARCHS = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ImageCompress/ImageCompress.entitlements;
