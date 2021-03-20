@@ -35,7 +35,7 @@
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/wangwanjie/ImageCompress/master/appcast.xml</string>
+	<string>https://github.com/wangwanjie/ImageCompress/raw/master/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>1oNr1ETj+PunsBbJAb64HuHxACah0pQF07cidiG5rHc=</string>
 </dict>

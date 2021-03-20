@@ -44,6 +44,7 @@ class ViewController: NSViewController {
 
     deinit {
         removeDataSourceObserver()
+        NotificationCenter.default.removeObserver(self)
     }
 
     // MARK: - 右键点击
@@ -134,6 +135,7 @@ class ViewController: NSViewController {
         let textField = NSTextField()
         textField.font = NSFont.systemFont(ofSize: 20)
         textField.stringValue = "500"
+        NotificationCenter.default.addObserver(self, selector: #selector(textfiledDidChanged(_:)), name: NSControl.textDidChangeNotification, object: textField)
         return textField
     }()
 
@@ -182,6 +184,25 @@ class ViewController: NSViewController {
         menu.delegate = self
         return menu
     }()
+
+    @objc func textfiledDidChanged(_ noti: Notification) {
+        let obj: NSTextField? = noti.object as? NSTextField
+
+        guard let field = obj else {
+            return
+        }
+
+        if textField.isEqual(field) {
+            let text = field.stringValue
+            if let value = Double(text) {
+                if value <= 0 {
+                    field.stringValue = ""
+                }
+            } else {
+                field.stringValue = ""
+            }
+        }
+    }
 }
 
 // MARK: - NSTableViewDataSource
@@ -301,7 +322,7 @@ extension ViewController {
         dragDropView.snp.makeConstraints { make in
             make.centerX.equalTo(tableViewContainer)
             make.centerY.equalTo(tableViewContainer)
-            make.size.equalTo(NSSize(width: 300, height: 300))
+            make.size.equalTo(tableViewContainer)
         }
     }
 }

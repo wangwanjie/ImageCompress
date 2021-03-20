@@ -26,7 +26,7 @@ public final class WJDragDropView: NSView {
         registerForDraggedTypes()
     }
 
-    public override init(frame frameRect: NSRect) {
+    override public init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
 
         registerForDraggedTypes()
@@ -41,7 +41,7 @@ public final class WJDragDropView: NSView {
         }
     }
 
-    public override func draw(_ dirtyRect: NSRect) {
+    override public func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
         // Drawing code here.
@@ -51,16 +51,23 @@ public final class WJDragDropView: NSView {
             NSColor.clear.set()
         }
 
-        __NSRectFillUsingOperation(dirtyRect, NSCompositingOperation.sourceOver)
+        let normalWidth: CGFloat = 300.0
+
+        var rect: NSRect = dirtyRect
+        if dirtyRect.size.width > normalWidth, dirtyRect.size.height > normalWidth {
+            rect = NSRect(x: (dirtyRect.size.width - normalWidth) * 0.5, y: (dirtyRect.size.height - normalWidth) * 0.5, width: normalWidth, height: normalWidth)
+        }
+
+        __NSRectFillUsingOperation(rect, NSCompositingOperation.sourceOver)
 
         let grayColor = NSColor(deviceWhite: 0, alpha: highlight ? 1.0 / 4.0 : 1.0 / 8.0)
         grayColor.set()
         grayColor.setFill()
 
-        let bounds = self.bounds
+        let bounds = (dirtyRect.size.width > normalWidth && dirtyRect.size.height > normalWidth) ? rect : self.bounds
         let size = min(bounds.size.width - 8.0, bounds.size.height - 8.0)
         let width = max(2.0, size / 32.0)
-        let frame = NSMakeRect((bounds.size.width - size) / 2.0, (bounds.size.height - size) / 2.0, size, size)
+        let frame = NSMakeRect((bounds.size.width - size) / 2.0 + bounds.origin.x, (bounds.size.height - size) / 2.0 + bounds.origin.y, size, size)
 
         NSBezierPath.defaultLineWidth = width
 
@@ -76,23 +83,23 @@ public final class WJDragDropView: NSView {
         let baseHeight = size / 8.0
         let arrowWidth = baseWidth * 2.0
         let pointHeight = baseHeight * 3.0
-        let offset = -size / 8.0
+        let offset = -size / 8.0 - bounds.origin.y
 
-        arrowPath.move(to: NSMakePoint(bounds.size.width / 2.0 - baseWidth, bounds.size.height / 2.0 + baseHeight - offset))
+        arrowPath.move(to: NSMakePoint(bounds.size.width / 2.0 - baseWidth + bounds.origin.x, bounds.size.height / 2.0 + baseHeight - offset))
 
-        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 + baseWidth, bounds.size.height / 2.0 + baseHeight - offset))
-        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 + baseWidth, bounds.size.height / 2.0 - baseHeight - offset))
-        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 + arrowWidth, bounds.size.height / 2.0 - baseHeight - offset))
-        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0, bounds.size.height / 2.0 - pointHeight - offset))
-        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 - arrowWidth, bounds.size.height / 2.0 - baseHeight - offset))
-        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 - baseWidth, bounds.size.height / 2.0 - baseHeight - offset))
+        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 + baseWidth + bounds.origin.x, bounds.size.height / 2.0 + baseHeight - offset))
+        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 + baseWidth + bounds.origin.x, bounds.size.height / 2.0 - baseHeight - offset))
+        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 + arrowWidth + bounds.origin.x, bounds.size.height / 2.0 - baseHeight - offset))
+        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 + bounds.origin.x, bounds.size.height / 2.0 - pointHeight - offset))
+        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 - arrowWidth + bounds.origin.x, bounds.size.height / 2.0 - baseHeight - offset))
+        arrowPath.line(to: NSMakePoint(bounds.size.width / 2.0 - baseWidth + bounds.origin.x, bounds.size.height / 2.0 - baseHeight - offset))
 
         arrowPath.fill()
     }
 
     // MARK: - NSDraggingDestination
 
-    public override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
+    override public func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
         highlight = true
         fileTypeIsOk = isExtensionAcceptable(draggingInfo: sender)
 
@@ -100,16 +107,16 @@ public final class WJDragDropView: NSView {
         return []
     }
 
-    public override func draggingExited(_: NSDraggingInfo?) {
+    override public func draggingExited(_: NSDraggingInfo?) {
         highlight = false
         setNeedsDisplay(bounds)
     }
 
-    public override func draggingUpdated(_: NSDraggingInfo) -> NSDragOperation {
+    override public func draggingUpdated(_: NSDraggingInfo) -> NSDragOperation {
         return fileTypeIsOk ? .copy : []
     }
 
-    public override func prepareForDragOperation(_: NSDraggingInfo) -> Bool {
+    override public func prepareForDragOperation(_: NSDraggingInfo) -> Bool {
         // finished with dragging so remove any highlighting
         highlight = false
         setNeedsDisplay(bounds)
@@ -117,7 +124,7 @@ public final class WJDragDropView: NSView {
         return true
     }
 
-    public override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
+    override public func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
         if sender.filePathURLs.count == 0 {
             return false
         }
@@ -175,7 +182,7 @@ public final class WJDragDropView: NSView {
         return false
     }
 
-    public override func acceptsFirstMouse(for _: NSEvent?) -> Bool {
+    override public func acceptsFirstMouse(for _: NSEvent?) -> Bool {
         return true
     }
 }
